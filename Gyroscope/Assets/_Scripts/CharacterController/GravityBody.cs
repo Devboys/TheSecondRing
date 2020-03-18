@@ -12,8 +12,8 @@ public class GravityBody : MonoBehaviour {
 		Player, AllignedObject, FreeObject
 	}
 
-	void Awake () {
-		planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
+	/*void Awake () {
+	//	planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
 		rigidbody = GetComponent<Rigidbody> ();
 
 		// Disable rigidbody gravity and rotation as this is simulated in GravityAttractor script
@@ -41,5 +41,5 @@ public class GravityBody : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
-	}
+	}*/
 }
