@@ -30,7 +30,6 @@ public class GravityBody : MonoBehaviour {
 			default:
 				break;
 		}
-		
 	}
 	
 	void FixedUpdate () {
