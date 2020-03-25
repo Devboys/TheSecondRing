@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Projects\Gimbal\Gimbal\Gyroscope" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Scripts" t="Include">
+          <e p="Activatables" t="Include">
+            <e p="ChangeIntensityOnActivate.cs" t="Include" />
+            <e p="ChildActivator.cs" t="Include" />
+            <e p="FloatOnActivate.cs" t="Include" />
+            <e p="MoveToPoseOnActivate.cs" t="Include" />
+            <e p="RotateOnActive.cs" t="Include" />
+          </e>
+          <e p="ActivateableBase.cs" t="Include" />
+          <e p="Activator.cs" t="Include" />
+          <e p="CharacterController" t="Include">
+            <e p="FirstPersonController.cs" t="Include" />
+            <e p="FirstPersonControllerFlat.cs" t="Include" />
+            <e p="GravityAttractor.cs" t="Include" />
+            <e p="GravityBody.cs" t="Include" />
+          </e>
+          <e p="PlayerController.cs" t="Include" />
+          <e p="RotateAroundAxis.cs" t="Include" />
+          <e p="StaticMath.cs" t="Include" />
+        </e>
+        <e p="StolenAssets.txt" t="Include" />
+      </e>
+      <e p="Gyroscope.sln" t="IncludeFlat" />
+      <e p="LocalPackages" t="Include">
+        <e p="com.unity.render-pipelines.high-definition-config" t="Include">
+          <e p="Runtime" t="Include">
+            <e p="ShaderConfig.cs" t="Include" />
+            <e p="ShaderConfig.cs.hlsl" t="Include" />
+            <e p="Unity.RenderPipelines.HighDefinition.Config.Runtime.asmdef" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj" t="IncludeRecursive" />
+    </e>
+    <e p="C:\Users\per.soerensen\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\per.soerensen\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Gyroscope.802062373.00" t="ExcludeRecursive" />
+  </component>
+</project>
