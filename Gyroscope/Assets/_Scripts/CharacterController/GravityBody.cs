@@ -12,8 +12,8 @@ public class GravityBody : MonoBehaviour {
 		Player, AllignedObject, FreeObject
 	}
 
-	/*void Awake () {
-	//	planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
+	void Awake () {
+		planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
 		rigidbody = GetComponent<Rigidbody> ();
 
 		// Disable rigidbody gravity and rotation as this is simulated in GravityAttractor script
@@ -36,9 +36,9 @@ public class GravityBody : MonoBehaviour {
 		// Allow this body to be influenced by planet's gravity
 		planet.Attract(rigidbody, bodyType);
 
-		if (transform.position.magnitude > 200)
-		{
-			Destroy(this.gameObject);
-		}
-	}*/
+		// if (transform.position.magnitude > 200)
+		// {
+		// 	Destroy(this.gameObject);
+		// }
+	}
 }
