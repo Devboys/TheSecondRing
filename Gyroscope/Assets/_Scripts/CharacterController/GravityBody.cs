@@ -30,16 +30,15 @@ public class GravityBody : MonoBehaviour {
 			default:
 				break;
 		}
-		
 	}
 	
 	void FixedUpdate () {
 		// Allow this body to be influenced by planet's gravity
 		planet.Attract(rigidbody, bodyType);
 
-		if (transform.position.magnitude > 200)
-		{
-			Destroy(this.gameObject);
-		}
+		// if (transform.position.magnitude > 200)
+		// {
+		// 	Destroy(this.gameObject);
+		// }
 	}
 }
