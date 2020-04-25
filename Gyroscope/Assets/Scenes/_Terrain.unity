@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block01 Variant (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -446,6 +451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
@@ -1190,6 +1200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
@@ -2204,6 +2219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block01 Variant (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2774,6 +2794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block01 Variant (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3299,6 +3324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
@@ -4525,6 +4555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block01 Variant (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4614,6 +4649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
@@ -4983,6 +5023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
@@ -5488,6 +5533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block01 Variant (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894946316741208718, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7463686869391087773, guid: 7c2a1e525dc3d6043beefed593a4fdb0,
         type: 3}
