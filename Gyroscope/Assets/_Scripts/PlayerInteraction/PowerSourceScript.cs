@@ -9,7 +9,7 @@ public class PowerSourceScript : OnClickInteractable
         base.HandleInteract(sender);
 
         //give player powersource
-        sender.GetComponentInParent<Activator>().isActive = true;
+        sender.GetComponentInParent<PlayerStateHandler>().EnableActivator();
 
         //remove self
         this.gameObject.SetActive(false);

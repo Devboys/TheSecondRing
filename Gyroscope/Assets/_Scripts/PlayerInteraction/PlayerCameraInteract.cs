@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerCameraInteract : MonoBehaviour
 {
-
-    public PlayerController player;
     
     [Header("Interaction ray")]
     public float interactRange;
