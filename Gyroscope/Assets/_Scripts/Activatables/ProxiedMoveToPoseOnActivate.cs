@@ -3,26 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToPoseOnActivate : ActivateableBase
+public class ProxiedMoveToPoseOnActivate : ProxiedActivateableBase
 {
     [SerializeField] private AnimationCurve Easing;
     [SerializeField] private Vector3 LocalOffsetOnInactive;
-    [SerializeField] private Transform ActivatorTrans;
-    [SerializeField] private Vector2 MinMaxDistanceEffect;
-
 
     private Vector3 StartPos;
     private Vector3 TargetPos;
-
-    public override void Activate(GameObject activator)
-    {
-        ActivatorTrans = activator.transform;
-    }
-
-    public override void Disable()
-    {
-        ActivatorTrans = null;
-    }
 
     private void Start()
     {
@@ -30,17 +17,9 @@ public class MoveToPoseOnActivate : ActivateableBase
         TargetPos = StartPos + transform.TransformVector(LocalOffsetOnInactive);
     }
 
-    private void Update()
+    public override void UpdateActivation(float activation)
     {
-        float t = 1;
-        if (ActivatorTrans != null)
-        {
-            float dist = Vector3.Distance(ActivatorTrans.position, StartPos);
-            t = StaticMath.NormalizeValue(dist, MinMaxDistanceEffect.x, MinMaxDistanceEffect.y);
-        }
-
-        t = Mathf.Clamp01(t);
-        t = Easing.Evaluate(t);
+        float t = Easing.Evaluate(activation);
         transform.position = Vector3.Lerp(StartPos, TargetPos , t);
     }
 

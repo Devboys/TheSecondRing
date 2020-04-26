@@ -14,4 +14,12 @@ public class Activator : MonoBehaviour
             other.GetComponent<ActivateableBase>()?.Activate(gameObject);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (isActive)
+        {
+            other.GetComponent<ActivateableBase>()?.Disable();
+        }
+    }
 }

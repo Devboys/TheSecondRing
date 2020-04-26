@@ -9,17 +9,17 @@ public abstract class ActivateableBase : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
-            Activate(other.gameObject);
-        }
+        //if (other.tag == "Player")
+        //{
+        //    Activate(other.gameObject);
+        //}
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
-        {
-            Disable();
-        }
+        //if (other.tag == "Player")
+        //{
+        //    Disable();
+        //}
     }
 }
