@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class DialogueManager : MonoBehaviour
     #endregion
 
     public Canvas DialogueUIParent;
-    public Text speakerText;
-    public Text SentenceText;
+    public TextMeshProUGUI speakerText;
+    public TextMeshProUGUI sentenceText;
+
+    public FirstPersonController playerController;
 
     private Queue<Dialogue.SentenceCombo> sentences;
 
@@ -56,7 +59,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation of length: " + dialogue.sentences.Length);
+        playerController.controlEnabled = false;
+
+        DialogueUIParent.gameObject.SetActive(true);
         sentences.Clear();
 
         dialogueInProgress = true;
@@ -81,12 +86,14 @@ public class DialogueManager : MonoBehaviour
         string speaker = sentenceCombo.speakerName;
         string sentence = sentenceCombo.sentence;
 
-        Debug.Log($"{speaker} says: {sentence}");
+        speakerText.SetText(speaker);
+        sentenceText.SetText(sentence);
     }
 
     private void EndDialogue()
     {
-        Debug.Log("End of conversation");
+        DialogueUIParent.gameObject.SetActive(false);
         dialogueInProgress = false;
+        playerController.controlEnabled = true;
     }
 }

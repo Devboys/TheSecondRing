@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   sentences:
-  - speakerName: Speaker1
-    sentence: Sentence1
-  - speakerName: Speaker2
-    sentence: Sentence2
-  - speakerName: Speaker1
-    sentence: Sentence3
-  - speakerName: Speaker3
-    sentence: Sentence4
-  - speakerName: Speaker2
-    sentence: 
+  - speakerName: Engineer #4875
+    sentence: I'm an engineer and i'm totally talking about important stuff
+  - speakerName: Engineer's Assistant
+    sentence: Yea i'm totally helping out because i'm an assistant
+  - speakerName: Engineer #4875
+    sentence: I work on robots
+  - speakerName: Math man
+    sentence: Hi i'm the math man and i'm here to deliver important exposition about
+      how the world is ending
+  - speakerName: Engineer's Assistant
+    sentence: I'm young and not in charge so these troubling news really make me
+      panic

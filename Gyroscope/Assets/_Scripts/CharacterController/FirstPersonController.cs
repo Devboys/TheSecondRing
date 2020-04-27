@@ -10,6 +10,7 @@ public class FirstPersonController : MonoBehaviour {
 	public float walkSpeed = 6;
 	public float jumpForce = 220;
 	public LayerMask groundedMask;
+    public bool controlEnabled;
 	
 	// System vars
 	bool grounded;
@@ -21,6 +22,8 @@ public class FirstPersonController : MonoBehaviour {
 	
 	
 	void Awake() {
+        controlEnabled = true;
+
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		cameraTransform = Camera.main.transform;
@@ -28,28 +31,37 @@ public class FirstPersonController : MonoBehaviour {
 	}
 	
 	void Update() {
-		
-		// Look rotation:
-		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
-		verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
-		verticalLookRotation = Mathf.Clamp(verticalLookRotation,-60,60);
-		cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
-		
-		// Calculate movement:
-		float inputX = Input.GetAxisRaw("Horizontal");
-		float inputY = Input.GetAxisRaw("Vertical");
-		
-		Vector3 moveDir = new Vector3(inputX,0, inputY).normalized;
-		Vector3 targetMoveAmount = moveDir * walkSpeed;
-		moveAmount = Vector3.SmoothDamp(moveAmount,targetMoveAmount,ref smoothMoveVelocity,.15f);
-		
-		// Jump
-		if (Input.GetButtonDown("Jump")) {
-			if (grounded) {
-				rigidbody.AddForce(transform.up * jumpForce);
-			}
-		}
-		
+
+        if (controlEnabled)
+        {
+            // Look rotation:
+            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
+            verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
+            verticalLookRotation = Mathf.Clamp(verticalLookRotation, -60, 60);
+            cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation;
+
+            // Calculate movement:
+            float inputX = Input.GetAxisRaw("Horizontal");
+            float inputY = Input.GetAxisRaw("Vertical");
+
+            Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
+            Vector3 targetMoveAmount = moveDir * walkSpeed;
+            moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+
+            // Jump
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (grounded)
+                {
+                    rigidbody.AddForce(transform.up * jumpForce);
+                }
+            }
+        }
+        else
+        {
+            moveAmount = Vector2.zero;
+        }
+
 		// Grounded check
 		Ray ray = new Ray(transform.position, -transform.up);
 		RaycastHit hit;
