@@ -16,7 +16,6 @@ public class MoveToPoseOnActivate : ActivateableBase
     private Vector3 StartPos;
     private Vector3 TargetPos;
     [SerializeField]private float MaxSpeed;
-    [SerializeField]private Vector2 MinMaxDistanceEffect;
 
     private Vector3 GetTargetPos => Target != null ? Target.position : StartPos;
     private Vector3 GetTargetPosGizmos => Target != null ? Target.position : transform.position;
