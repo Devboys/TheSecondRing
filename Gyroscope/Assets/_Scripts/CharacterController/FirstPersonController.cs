@@ -80,4 +80,9 @@ public class FirstPersonController : MonoBehaviour {
 		Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
 		rigidbody.MovePosition(rigidbody.position + localMove);
 	}
+
+    public void TeleportPlayerToPosition(Vector3 position)
+    {
+        rigidbody.position = position;
+    }
 }

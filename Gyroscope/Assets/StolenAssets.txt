@@ -1,1 +1,2 @@
 https://github.com/SebLague/Spherical-Gravity //Sphere movement and gravity
+https://www.1001fonts.com/good-times-font.html //Dialogue font (as of 27/04-2020)
