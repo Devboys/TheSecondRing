@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class MoveToPoseOnActivate : ActivateableBase
 {
-    [SerializeField] private AnimationCurve Easing;
-    [SerializeField] private Vector3 LocalOffsetOnInactive;
+    [SerializeField]private AnimationCurve Easing;
+    [SerializeField] private Transform Target;
+
+    [SerializeField]private Vector3 LocalOffsetOnInactive;
     [SerializeField] private Transform ActivatorTrans;
     [SerializeField] private Vector2 MinMaxDistanceEffect;
 
 
     private Vector3 StartPos;
     private Vector3 TargetPos;
+    [SerializeField]private float MaxSpeed;
 
+    private Vector3 GetTargetPos => Target != null ? Target.position : StartPos;
+    private Vector3 GetTargetPosGizmos => Target != null ? Target.position : transform.position;
     public override void Activate(GameObject activator)
     {
         ActivatorTrans = activator.transform;
@@ -35,8 +40,8 @@ public class MoveToPoseOnActivate : ActivateableBase
         float t = 1;
         if (ActivatorTrans != null)
         {
-            float dist = Vector3.Distance(ActivatorTrans.position, StartPos);
-            t = StaticMath.NormalizeValue(dist, MinMaxDistanceEffect.x, MinMaxDistanceEffect.y);
+            t = StaticMath.NormalizeValue(Vector3.Distance(ActivatorTrans.position, GetTargetPos), MinMaxDistanceEffect.x,
+                MinMaxDistanceEffect.y);
         }
 
         t = Mathf.Clamp01(t);
@@ -44,34 +49,20 @@ public class MoveToPoseOnActivate : ActivateableBase
         transform.position = Vector3.Lerp(StartPos, TargetPos , t);
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        //draw final position
-        float gizmoSize = 0.5f;
-
-        if (TargetPos != null)
+        if (GetComponent<Collider>() == null)
         {
-            //draw target pos
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(TargetPos, gizmoSize);
-
-            //draw start pos
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(StartPos, gizmoSize);
-
-            //draw current pos;
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, gizmoSize / 2f);
+            return;
         }
-        else
-        {
-            //draw target pos
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(TargetPos, gizmoSize);
 
-            //draw current Pos;
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(TargetPos, gizmoSize);
-        }
+        Gizmos.DrawWireCube(transform.position + transform.TransformVector(LocalOffsetOnInactive), GetComponent<Collider>().bounds.size);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(GetTargetPosGizmos, MinMaxDistanceEffect.y);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(GetTargetPosGizmos, MinMaxDistanceEffect.x);
+        Gizmos.DrawSphere(GetTargetPosGizmos, 1);
+
+        Gizmos.DrawLine(GetTargetPosGizmos, transform.position + transform.TransformVector(LocalOffsetOnInactive));
     }
 }
