@@ -16,7 +16,12 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Halo01\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"2088806271\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
+      uid=\"2088806271\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"HistogramScan\"
+      uid=\"397493093\" type=\"0\" value=\"0.69\" />\n  <presetinput identifier=\"wavenormal\"
+      uid=\"397974208\" type=\"0\" value=\"0.127\" />\n  <presetinput identifier=\"saturation\"
+      uid=\"397973731\" type=\"0\" value=\"0.303\" />\n  <presetinput identifier=\"luminosity\"
+      uid=\"397973720\" type=\"0\" value=\"0.476\" />\n  <presetinput identifier=\"scale\"
+      uid=\"397973517\" type=\"4\" value=\"6\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
