@@ -10,6 +10,9 @@ public class MoveToPoseOnActivate : ActivateableBase
 
     [SerializeField]private Vector3 LocalOffsetOnInactive;
     [SerializeField] private Transform ActivatorTrans;
+    [SerializeField] private Vector2 MinMaxDistanceEffect;
+
+
     private Vector3 StartPos;
     private Vector3 TargetPos;
     [SerializeField]private float MaxSpeed;
@@ -37,12 +40,13 @@ public class MoveToPoseOnActivate : ActivateableBase
     {
         float t = 1;
         if (ActivatorTrans != null)
-        { 
+        {
             t = StaticMath.NormalizeValue(Vector3.Distance(ActivatorTrans.position, GetTargetPos), MinMaxDistanceEffect.x,
                 MinMaxDistanceEffect.y);
         }
 
-        t = Easing.Evaluate(Mathf.Clamp01(t));
+        t = Mathf.Clamp01(t);
+        t = Easing.Evaluate(t);
         transform.position = Vector3.Lerp(StartPos, TargetPos , t);
     }
 
@@ -52,7 +56,7 @@ public class MoveToPoseOnActivate : ActivateableBase
         {
             return;
         }
-        
+
         Gizmos.DrawWireCube(transform.position + transform.TransformVector(LocalOffsetOnInactive), GetComponent<Collider>().bounds.size);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(GetTargetPosGizmos, MinMaxDistanceEffect.y);
