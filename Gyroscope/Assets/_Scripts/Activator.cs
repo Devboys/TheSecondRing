@@ -5,8 +5,21 @@ using UnityEngine;
 
 public class Activator : MonoBehaviour
 {
-   private void OnTriggerEnter(Collider other)
-   {
-      other.GetComponent<ActivateableBase>()?.Activate(gameObject);
-   }
+    public bool isActive = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isActive)
+        { 
+            other.GetComponent<ActivateableBase>()?.Activate(gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (isActive)
+        {
+            other.GetComponent<ActivateableBase>()?.Disable();
+        }
+    }
 }
