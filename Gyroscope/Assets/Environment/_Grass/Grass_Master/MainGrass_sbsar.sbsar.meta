@@ -20,8 +20,8 @@ ScriptedImporter:
       <presetinput identifier=\"$randomseed\" uid=\"3495253268\" type=\"4\" value=\"6355\"
       />\n  <presetinput identifier=\"color_hue\" uid=\"4022887114\" type=\"0\" value=\"0.462\"
       />\n  <presetinput identifier=\"color_saturation\" uid=\"4022887137\" type=\"0\"
-      value=\"0.503\" />\n  <presetinput identifier=\"color_lightness\" uid=\"4022887153\"
-      type=\"0\" value=\"0.482\" />\n  <presetinput identifier=\"rougness\" uid=\"4022887372\"
+      value=\"0.504\" />\n  <presetinput identifier=\"color_lightness\" uid=\"4022887153\"
+      type=\"0\" value=\"0.545\" />\n  <presetinput identifier=\"rougness\" uid=\"4022887372\"
       type=\"0\" value=\"1\" />\n  <presetinput identifier=\"normal\" uid=\"4022887703\"
       type=\"0\" value=\"0\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
