@@ -1815,13 +1815,13 @@ TextMesh:
     We need to be up and running
     soon if we are going to make it for this cycle.
 
-    
 
-    We have sent the
-    little ones and the ones who does not work to the next ring.
 
-    There is no
-    reason for them to be here, especially in the quite likely event of an accident.
+    We have sent the little
+    ones and the ones who does not work to the next ring.
+
+    There is no reason
+    for them to be here, especially in the quite likely event of an accident.
 
     Not
     that it would do them much good in the long run though.
@@ -1829,7 +1829,7 @@ TextMesh:
     Anyhow, we should
     be able to get this thing to work in a few tries.
 
-    
+
 
     We have to."'
   m_OffsetZ: 0
@@ -2770,56 +2770,55 @@ TextMesh:
   m_GameObject: {fileID: 1199793819}
   m_Text: '"''What are you doing?''
 
-    
 
-''    I am trying to make a log, what
+
+''        I am trying to make a log, what
     does it look like I''m doing?''
 
-    
 
-''    You''re doing it on that? Why
-    exactly?''
 
-    
+''        You''re doing it on that? Why exactly?''
 
-''    Easier to transport the log. Plus, it will keep far
-    longer than on anything else.''
 
-    
 
-''    Whatever you say.''
+''       
+    Easier to transport the log. Plus, it will keep far longer than on anything else.''
 
-    
 
-''    Right,
-    so where was I?
 
-    Yes, the way through the mountain... It hasnt been easy
-    to gate the way to the generator,
+''       
+    Whatever you say.''
 
-    but I think we might have done it. You
-    need a power source to go all the way through now,
 
-    and even then, you would
-    have to have a completely fresh one to go all the way through without being trapped
-    by the crystals.
 
-    It does seem inconvenient at first glance, but there is
-    no reason to go to the generator unless you need to restart it, and for that,
+''        Right, so where was I?
 
-    you
-    need a power source.''
+    Yes, the way through
+    the mountain... It hasnt been easy to gate the way to the generator,
 
-    
+    but
+    I think we might have done it. You need a power source to go all the way through
+    now,
 
-''    But what if the thing runs out of power
-    before the carrier gets all the way through?''
+    and even then, you would have to have a completely fresh one to go
+    all the way through without being trapped by the crystals.
 
-    
+    It does seem
+    inconvenient at first glance, but there is no reason to go to the generator unless
+    you need to restart it, and for that,
 
-''    ... That''s actually
-    a good point. I didn''t think of that. We might have to change the design of
-    the cave a bit.''"'
+    you need a power source.''
+
+
+
+''       
+    But what if the thing runs out of power before the carrier gets all the way through?''
+
+
+
+''       
+    ... That''s actually a good point. I didn''t think of that. We might have to
+    change the design of the cave a bit.''"'
   m_OffsetZ: 0
   m_CharacterSize: 0.018
   m_LineSpacing: 1
@@ -4160,7 +4159,7 @@ TextMesh:
   m_TabSize: 4.03
   m_FontSize: 100
   m_FontStyle: 0
-  m_RichText: 1
+  m_RichText: 0
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
