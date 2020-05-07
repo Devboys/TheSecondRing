@@ -1,6 +1,8 @@
 fileFormatVersion: 2
-guid: 90607444550e22e408be5d602cf0f256
-PrefabImporter:
+guid: 8dee02f70a09e05478c736295afca4f1
+labels:
+- FMOD
+DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
