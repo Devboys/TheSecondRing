@@ -25,16 +25,20 @@ public class DialogueManager : MonoBehaviour
     }
     #endregion
 
+    public FirstPersonController playerController;
+
+    [Header("Dialogue UI")]
     public Canvas DialogueUIParent;
     public TextMeshProUGUI speakerText;
     public TextMeshProUGUI sentenceText;
 
-    public FirstPersonController playerController;
+    [Header("Text UI")]
+    public Canvas TextUIParent;
+    public TextMeshProUGUI TextUIText;
 
     private Queue<Dialogue.SentenceCombo> sentences;
-
     private bool dialogueInProgress;
-
+    private bool textInProgress;
 
     private void Awake()
     {
@@ -52,9 +56,33 @@ public class DialogueManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Submit"))
             {
-                DisplayNextSentence();
+                DisplayNextSentenceDialogue();
             }
         }
+        else if (textInProgress)
+        {
+            if (Input.GetButtonDown("Submit"))
+            {
+                EndText();
+            }
+        }
+    }
+
+    public void DisplayText(SingleText singleText)
+    {
+        playerController.controlEnabled = false;
+        TextUIParent.gameObject.SetActive(true);
+        TextUIText.SetText(singleText.text);
+
+        textInProgress = true;
+    }
+
+    public void EndText()
+    {
+        playerController.controlEnabled = true;
+        TextUIParent.gameObject.SetActive(false);
+
+        textInProgress = false;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -71,10 +99,10 @@ public class DialogueManager : MonoBehaviour
             this.sentences.Enqueue(sentenceCombo);
         }
 
-        DisplayNextSentence();
+        DisplayNextSentenceDialogue();
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentenceDialogue()
     {
         if (sentences.Count == 0) //end of queue
         {

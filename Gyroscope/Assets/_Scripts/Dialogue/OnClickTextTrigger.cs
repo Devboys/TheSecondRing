@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnClickDialogueTrigger : OnClickInteractable
+public class OnClickTextTrigger : OnClickInteractable
 {
-    public Dialogue dialogue;
+
+    public SingleText singleText;
 
     public override void HandleInteract(GameObject sender)
     {
-        DialogueManager.GetInstance().StartDialogue(dialogue);
+        DialogueManager.GetInstance().DisplayText(singleText);
     }
 
 }
