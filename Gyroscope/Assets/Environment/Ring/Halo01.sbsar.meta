@@ -13,19 +13,22 @@ ScriptedImporter:
   - graphLabel: Halo01
     prototypeName: Halo01
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Halo01\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"2088806271\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"HistogramScan\"
-      uid=\"397493093\" type=\"0\" value=\"0.579\" />\n  <presetinput identifier=\"wavenormal\"
-      uid=\"397974208\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"saturation\"
-      uid=\"397973731\" type=\"0\" value=\"0.358\" />\n  <presetinput identifier=\"luminosity\"
-      uid=\"397973720\" type=\"0\" value=\"0.503\" />\n  <presetinput identifier=\"scale\"
-      uid=\"397973517\" type=\"4\" value=\"3\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://CircleWorld\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"1639007191\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"$randomseed\" uid=\"918771077\" type=\"4\" value=\"4594\"
+      />\n  <presetinput identifier=\"water\" uid=\"153651306\" type=\"3\" value=\"0,0.303235,0.518868,1\"
+      />\n  <presetinput identifier=\"scale\" uid=\"153651383\" type=\"4\" value=\"7\"
+      />\n  <presetinput identifier=\"disorder\" uid=\"153651368\" type=\"0\" value=\"1\"
+      />\n  <presetinput identifier=\"Height_Contrast\" uid=\"153644031\" type=\"0\"
+      value=\"0.64\" />\n  <presetinput identifier=\"Height_Pos\" uid=\"153643016\"
+      type=\"0\" value=\"0.496\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _BASECOLORMAP _HEIGHTMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+      shaderKeywords: _BASECOLORMAP _HEIGHTMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+        _OCCLUSIONMAP _ROUGHNESSMAP
       lightmapFlags: 4
       texEnvs:
       - name: _AnisotropyMap
@@ -554,4 +557,7 @@ ScriptedImporter:
     generatedTextures:
     - {fileID: 4114450868200944430, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
     - {fileID: 5026269004233195001, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
+    - {fileID: 6252235102630403936, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
+    - {fileID: -6312147503247098431, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
     - {fileID: -1641370732285487627, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
+    - {fileID: 9085031906519908821, guid: 0170ba9126321284fa5a503adcdd2c29, type: 3}
