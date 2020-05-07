@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0fea9faff717b46b7b2b06b1687739, type: 3}
+  m_Name: Rockbot 2
+  m_EditorClassIdentifier: 
+  sentences:
+  - speakerName: Voice 1
+    sentence: What are you doing?
+  - speakerName: Voice 2
+    sentence: I am trying to make a log, what does it look like I'm doing?
+  - speakerName: Voice 1
+    sentence: You're doing it on that? Why exactly?
+  - speakerName: Voice 2
+    sentence: Easier to transport the log. Plus, it will keep far longer than on
+      anything else.
+  - speakerName: Voice 1
+    sentence: 'Right, so where was I?
+
+      Yes, the way through the mountain...
+      It hasnt been easy to gate the way to the generator,
+
+      but I think we
+      might have done it. You need a power source to go all the way through now,
+
+      and
+      even then, you would have to have a completely fresh one to go all the way
+      through without being trapped by the crystals.
+
+      It does seem inconvenient
+      at first glance, but there is no reason to go to the generator unless you need
+      to restart it, and for that,
+
+      you need a power source.'
+  - speakerName: Voice 2
+    sentence: But what if the thing runs out of power before the carrier gets all
+      the way through?
+  - speakerName: Voice 1
+    sentence: ... That's actually a good point. I didn't think of that. We might
+      have to change the design of the cave a bit.
