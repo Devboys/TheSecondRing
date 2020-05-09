@@ -16,23 +16,23 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   rayTracing:
     m_OverrideState: 0
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.86
+    m_Value: 0.45
     min: 0
     max: 4
   directLightingStrength:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.007
     min: 0
     max: 1
   radius:
     m_OverrideState: 1
-    m_Value: 0.78
+    m_Value: 0.25
     min: 0.25
     max: 5
   temporalAccumulation:
@@ -108,10 +108,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.35
+    m_Value: 0.4
   contrast:
-    m_OverrideState: 0
-    m_Value: -2
+    m_OverrideState: 1
+    m_Value: 5
     min: -100
     max: 100
   colorFilter:
@@ -122,12 +122,12 @@ MonoBehaviour:
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -2
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -2
+    m_Value: 2
     min: -100
     max: 100
 --- !u!114 &-2702158034158035793
@@ -193,11 +193,11 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.39
+    m_Value: 0.37
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.444
+    m_Value: 0.498
     min: 0
     max: 1
   scatter:
@@ -255,13 +255,13 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 1
-    m_Value: 0.75
+    m_Value: 0.8
   limitMin:
     m_OverrideState: 1
     m_Value: -10
   limitMax:
     m_OverrideState: 1
-    m_Value: 9.76
+    m_Value: 10
   curveMap:
     m_OverrideState: 1
     m_Value:
@@ -315,13 +315,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.82482773, z: 0.9219753, w: -0.09625668}
+    m_Value: {x: 1, y: 0.91999763, z: 0.98267376, w: -0.09625668}
   midtones:
-    m_OverrideState: 0
-    m_Value: {x: 0.97767437, y: 1, z: 0.9200719, w: 0}
+    m_OverrideState: 1
+    m_Value: {x: 0.9642551, y: 0.95803094, z: 1, w: 0}
   highlights:
     m_OverrideState: 0
-    m_Value: {x: 0.89849305, y: 1, z: 0.49488539, w: 0}
+    m_Value: {x: 0.61898476, y: 1, z: 0.69364977, w: 0}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0.3
