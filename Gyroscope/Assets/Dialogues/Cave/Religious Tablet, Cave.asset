@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002da7aa03cd43941b3540c10a9fcf21, type: 3}
+  m_Name: Religious Tablet, Cave
+  m_EditorClassIdentifier: 
+  text: 'And then, we came. With tools and intellect, with questions and hunger,
+    we came. And we dug the soil and the ground, shaped the rocks and the trees,
+    made life in our own right. Even the roots of the Mother Tree we turned and twisted,
+    as She began to wither and fade away. And as the last leafs fell from her shruken
+    branches, He must have wept, for the sky opened, and from that day, the rotation
+    of our world slowed. Untill we were almost still.
+
+
+    And we were lost.'

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0fea9faff717b46b7b2b06b1687739, type: 3}
+  m_Name: Rockbot 1, cave
+  m_EditorClassIdentifier: 
+  sentences:
+  - speakerName: Priestess
+    sentence: Here... This is the place. The root of the Mother Tree.
+  - speakerName: Acolyte
+    sentence: What is in here, Mother?
+  - speakerName: Priestess
+    sentence: The beginning, the now, eternity... Our salvation.
+  - speakerName: Acolyte
+    sentence: What must we do then, Mother?
+  - speakerName: Priestess
+    sentence: '*sound of a drawn knife*
+
+      Lay upon the rock over there, child.'

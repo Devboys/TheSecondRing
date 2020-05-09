@@ -25,6 +25,7 @@ ScriptedImporter:
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
       shaderKeywords: _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP
+        _UNKNOWN_DIFFUSE
       lightmapFlags: 4
       texEnvs:
       - name: _AnisotropyMap
@@ -76,8 +77,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {fileID: -7601051599141715673, guid: 5af662de977c558499435e71462338e5,
-          type: 3}
+        texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -482,6 +482,10 @@ ScriptedImporter:
       wrapMode: 0
       filterMode: 1
       aniso: 1
+    - textureName: WillowTrunk - diffuse
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
     colorSpaceList: []
     inputTextureMap: []
     targetSettingList:
@@ -496,6 +500,6 @@ ScriptedImporter:
     material: {fileID: -7322314193835353900, guid: 5af662de977c558499435e71462338e5,
       type: 3}
     generatedTextures:
+    - {fileID: -4898821377788200725, guid: 5af662de977c558499435e71462338e5, type: 3}
     - {fileID: 6333575063166374114, guid: 5af662de977c558499435e71462338e5, type: 3}
     - {fileID: -6768582059847250021, guid: 5af662de977c558499435e71462338e5, type: 3}
-    - {fileID: -7601051599141715673, guid: 5af662de977c558499435e71462338e5, type: 3}
