@@ -2227,10 +2227,10 @@ ScriptedImporter:
       identifier=\"$outputsize\" uid=\"2732986774\" type=\"8\" value=\"9,9\" />\n 
       <presetinput identifier=\"hue\" uid=\"3389566655\" type=\"0\" value=\"0.165\"
       />\n  <presetinput identifier=\"saturation\" uid=\"3389564627\" type=\"0\"
-      value=\"0.641\" />\n  <presetinput identifier=\"luminosity\" uid=\"3389564636\"
-      type=\"0\" value=\"0.558\" />\n  <presetinput identifier=\"scale\" uid=\"3389564610\"
-      type=\"4\" value=\"3\" />\n  <presetinput identifier=\"alphaPos\" uid=\"3389558733\"
-      type=\"0\" value=\"0\" />\n </sbspreset>\n"
+      value=\"1\" />\n  <presetinput identifier=\"luminosity\" uid=\"3389564636\"
+      type=\"0\" value=\"0.492\" />\n  <presetinput identifier=\"scale\" uid=\"3389564610\"
+      type=\"4\" value=\"141\" />\n  <presetinput identifier=\"alphaPos\" uid=\"3389558733\"
+      type=\"0\" value=\"0.698\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

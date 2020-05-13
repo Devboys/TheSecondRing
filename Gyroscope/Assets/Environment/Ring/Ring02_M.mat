@@ -35,6 +35,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_B5D35479:
+        m_Texture: {fileID: 4114450868200944430, guid: 0170ba9126321284fa5a503adcdd2c29,
+          type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B5DAC361:
+        m_Texture: {fileID: 5026269004233195001, guid: 0170ba9126321284fa5a503adcdd2c29,
+          type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
