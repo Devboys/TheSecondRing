@@ -18,14 +18,12 @@ ScriptedImporter:
     preset: " <sbspreset pkgurl=\"pkg://Stylized_Grass_01\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"2267497286\" type=\"8\" value=\"9,9\" />\n 
       <presetinput identifier=\"$randomseed\" uid=\"3495253268\" type=\"4\" value=\"6355\"
-      />\n  <presetinput identifier=\"color_hue\" uid=\"4022887114\" type=\"0\" value=\"0.44\"
+      />\n  <presetinput identifier=\"color_hue\" uid=\"4022887114\" type=\"0\" value=\"0.925\"
       />\n  <presetinput identifier=\"color_saturation\" uid=\"4022887137\" type=\"0\"
-      value=\"0.6\" />\n  <presetinput identifier=\"color_lightness\" uid=\"4022887153\"
-      type=\"0\" value=\"0.459\" />\n  <presetinput identifier=\"rougness\" uid=\"4022887372\"
+      value=\"0.324\" />\n  <presetinput identifier=\"color_lightness\" uid=\"4022887153\"
+      type=\"0\" value=\"0.574\" />\n  <presetinput identifier=\"rougness\" uid=\"4022887372\"
       type=\"0\" value=\"1\" />\n  <presetinput identifier=\"normal\" uid=\"4022887703\"
-      type=\"0\" value=\"1.45\" />\n  <presetinput identifier=\"leveloutlow\" uid=\"4022192871\"
-      type=\"0\" value=\"0.243\" />\n  <presetinput identifier=\"levelouthigh\" uid=\"4022192891\"
-      type=\"0\" value=\"0.852\" />\n </sbspreset>\n"
+      type=\"0\" value=\"1.63\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
