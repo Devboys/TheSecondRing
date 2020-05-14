@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d877ec3e844f2ca46830012e8e79319b, type: 3}
   m_Name: PhysicallyBasedSky
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   rotation:
     m_OverrideState: 0
@@ -275,10 +275,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   earthPreset:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   sphericalMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   seaLevel:
     m_OverrideState: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
     m_Value: 6378100
     min: 0
   planetCenterPosition:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0, y: -6378100, z: 0}
   airDensityR:
     m_OverrideState: 0
@@ -316,8 +316,8 @@ MonoBehaviour:
     m_Value: 55261.973
     min: 0
   aerosolDensity:
-    m_OverrideState: 0
-    m_Value: 0.01192826
+    m_OverrideState: 1
+    m_Value: 1
     min: 0
     max: 1
   aerosolTint:
@@ -367,7 +367,7 @@ MonoBehaviour:
     m_Value: 1
     min: 0
   spaceRotation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
   colorSaturation:
     m_OverrideState: 0

@@ -289,11 +289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7904b4aae56f5a248a872e0c72558940, type: 2}
+      objectReference: {fileID: 2100000, guid: 0cce915727604484ebe1600e94a04c7c, type: 2}
     - target: {fileID: 6444513138118882988, guid: aa8476975af16d5489e19ff341b56a2d,
         type: 3}
       propertyPath: m_Name
-      value: Rock_Glowing_Prefab
+      value: Crystal01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa8476975af16d5489e19ff341b56a2d, type: 3}
