@@ -81,7 +81,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: 3285565494440796506, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -560,6 +561,7 @@ ScriptedImporter:
     - {fileID: 2375421188976147911, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -5147554945439316039, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: 2926218167849824876, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: 3285565494440796506, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
   - graphLabel: Ground_Rocks
     prototypeName: Ground_Grass
     graphDescIndex: 0
@@ -631,7 +633,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: -3167323797535652541, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -1110,6 +1113,7 @@ ScriptedImporter:
     - {fileID: -4237455059017914766, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: 6085995023405281699, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -5590997433153307971, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: -3167323797535652541, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
   - graphLabel: Ground_Snow
     prototypeName: Ground_Grass
     graphDescIndex: 0
@@ -1181,7 +1185,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: 8438945777022570526, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -1660,6 +1665,7 @@ ScriptedImporter:
     - {fileID: -1523691597053390588, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: 1377852935699278357, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -281034346236963917, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: 8438945777022570526, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
   - graphLabel: Ground_Dirt
     prototypeName: Ground_Grass
     graphDescIndex: 0
@@ -1731,7 +1737,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: -4952572074179799194, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -2210,6 +2217,7 @@ ScriptedImporter:
     - {fileID: 1266109198244170092, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -8308535000865888448, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -8201807022054764448, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: -4952572074179799194, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
   - graphLabel: Ground_blue
     prototypeName: Ground_Grass
     graphDescIndex: 0
@@ -2281,7 +2289,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: -4032629638884796251, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -2760,6 +2769,7 @@ ScriptedImporter:
     - {fileID: 1869295671550143718, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -6735819038442178263, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: 4497078522534542239, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: -4032629638884796251, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
   - graphLabel: Ground_Grass_02
     prototypeName: Ground_Grass
     graphDescIndex: 0
@@ -2831,7 +2841,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {instanceID: 0}
+        texture: {fileID: 471096091964674298, guid: 09213cb7a9778cd4fb1ff51363dc0499,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
@@ -3310,3 +3321,4 @@ ScriptedImporter:
     - {fileID: -2170624066108313187, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: -7229273935428464792, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
     - {fileID: 172061928023717157, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
+    - {fileID: 471096091964674298, guid: 09213cb7a9778cd4fb1ff51363dc0499, type: 3}
