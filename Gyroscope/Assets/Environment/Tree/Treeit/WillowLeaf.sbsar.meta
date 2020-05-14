@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f7fd5ed832146b40ac27e5f13227684
+guid: 331b80a8345a8b34d88c1afa428c67e3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,23 +10,24 @@ ScriptedImporter:
   script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
   version: 24
   mGraphInstanceData:
-  - graphLabel: Ground_Grass
-    prototypeName: Ground_Grass
+  - graphLabel: TreeLeafs
+    prototypeName: TreeLeafs
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Ground_Grass\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2732986774\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"hue\" uid=\"3389566655\" type=\"0\" value=\"0.528\"
-      />\n  <presetinput identifier=\"saturation\" uid=\"3389564627\" type=\"0\"
-      value=\"0.397\" />\n  <presetinput identifier=\"luminosity\" uid=\"3389564636\"
-      type=\"0\" value=\"0.544\" />\n  <presetinput identifier=\"scale\" uid=\"3389564610\"
-      type=\"4\" value=\"62\" />\n  <presetinput identifier=\"alphaPos\" uid=\"3389558733\"
-      type=\"0\" value=\"0\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://TreeLeafs\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"1814589844\" type=\"8\" value=\"6,6\" />\n 
+      <presetinput identifier=\"hue\" uid=\"78786851\" type=\"0\" value=\"0.593\"
+      />\n  <presetinput identifier=\"saturation\" uid=\"78786858\" type=\"0\" value=\"0.342\"
+      />\n  <presetinput identifier=\"luminosity\" uid=\"78787036\" type=\"0\" value=\"0.469\"
+      />\n  <presetinput identifier=\"Skew\" uid=\"78787755\" type=\"0\" value=\"-0.58\"
+      />\n  <presetinput identifier=\"slopeIntensity\" uid=\"78767139\" type=\"0\"
+      value=\"0.4\" />\n  <presetinput identifier=\"scale\" uid=\"78767601\" type=\"0\"
+      value=\"0.852\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _BASECOLORMAP _HEIGHTMAP _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+      shaderKeywords: _NORMALMAP _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP _UNKNOWN_DIFFUSE
       lightmapFlags: 4
       texEnvs:
       - name: _AnisotropyMap
@@ -34,8 +35,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
-        texture: {fileID: 2375421188976147911, guid: 5f7fd5ed832146b40ac27e5f13227684,
-          type: 3}
+        texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
@@ -63,8 +63,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _HeightMap
-        texture: {fileID: 2926218167849824876, guid: 5f7fd5ed832146b40ac27e5f13227684,
-          type: 3}
+        texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _IridescenceMaskMap
@@ -76,17 +75,15 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MainTex
-        texture: {fileID: 2375421188976147911, guid: 5f7fd5ed832146b40ac27e5f13227684,
-          type: 3}
+        texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {fileID: 3285565494440796506, guid: 5f7fd5ed832146b40ac27e5f13227684,
-          type: 3}
+        texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
-        texture: {fileID: -5147554945439316039, guid: 5f7fd5ed832146b40ac27e5f13227684,
+        texture: {fileID: -5141147141858779073, guid: 331b80a8345a8b34d88c1afa428c67e3,
           type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
@@ -95,7 +92,8 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SpecularColorMap
-        texture: {instanceID: 0}
+        texture: {fileID: 5320660289603579180, guid: 331b80a8345a8b34d88c1afa428c67e3,
+          type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SubsurfaceMaskMap
@@ -407,12 +405,12 @@ ScriptedImporter:
       - name: _UVMappingMaskEmissive
         color: {r: 1, g: 0, b: 0, a: 0}
     outputDescList:
-    - outputName: baseColor
-      identifier: basecolor
-      usageName: baseColor
-      channelStr: baseColor
-      label: Base Color
-      usage: 1
+    - outputName: diffuse
+      identifier: diffuse
+      usageName: diffuse
+      channelStr: diffuse
+      label: Diffuse
+      usage: 0
       bImage: 1
       bNumerical: 0
       bLinear: 0
@@ -425,42 +423,15 @@ ScriptedImporter:
       bImage: 1
       bNumerical: 0
       bLinear: 1
-    - outputName: roughness
-      identifier: roughness
-      usageName: roughness
-      channelStr: roughness
-      label: Roughness
-      usage: 15
+    - outputName: specular
+      identifier: specular
+      usageName: specular
+      channelStr: specular
+      label: Specular
+      usage: 11
       bImage: 1
       bNumerical: 0
-      bLinear: 1
-    - outputName: metallic
-      identifier: metallic
-      usageName: metallic
-      channelStr: metallic
-      label: Metallic
-      usage: 28
-      bImage: 1
-      bNumerical: 0
-      bLinear: 1
-    - outputName: height
-      identifier: height
-      usageName: height
-      channelStr: height
-      label: Height
-      usage: 9
-      bImage: 1
-      bNumerical: 0
-      bLinear: 1
-    - outputName: ambientOcclusion
-      identifier: ambientocclusion
-      usageName: ambientOcclusion
-      channelStr: ambientOcclusion
-      label: Ambient Occlusion
-      usage: 5
-      bImage: 1
-      bNumerical: 0
-      bLinear: 1
+      bLinear: 0
     - outputName: mask
       identifier: mask
       usageName: mask
@@ -471,9 +442,9 @@ ScriptedImporter:
       bNumerical: 0
       bLinear: 1
     texturePackingList:
-    - targetName: baseColor
+    - targetName: diffuse
       components:
-      - sourceName: baseColor
+      - sourceName: diffuse
         from: 0
         to: 3
     - targetName: normal
@@ -481,66 +452,35 @@ ScriptedImporter:
       - sourceName: normal
         from: 0
         to: 3
-    - targetName: roughness
+    - targetName: specular
       components:
-      - sourceName: roughness
-        from: 0
-        to: 3
-    - targetName: metallic
-      components:
-      - sourceName: smoothness
-        from: 0
-        to: 3
-    - targetName: height
-      components:
-      - sourceName: height
-        from: 0
-        to: 3
-    - targetName: ambientOcclusion
-      components:
-      - sourceName: ambientOcclusion
+      - sourceName: specular
         from: 0
         to: 3
     - targetName: mask
       components:
-      - sourceName: metallic
+      - sourceName: mask
         from: 0
         to: 0
-      - sourceName: ambientOcclusion
+      - sourceName: mask
         from: 0
         to: 1
       - sourceName: mask
         from: 0
         to: 2
-      - sourceName: smoothness
+      - sourceName: mask
         from: 0
         to: 3
     textureParameters:
-    - textureName: Ground_Grass - baseColor
+    - textureName: TreeLeafs - diffuse
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Ground_Grass - normal
+    - textureName: TreeLeafs - normal
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Ground_Grass - roughness
-      wrapMode: 0
-      filterMode: 1
-      aniso: 1
-    - textureName: Ground_Grass - metallic
-      wrapMode: 0
-      filterMode: 1
-      aniso: 1
-    - textureName: Ground_Grass - height
-      wrapMode: 0
-      filterMode: 1
-      aniso: 1
-    - textureName: Ground_Grass - ambientOcclusion
-      wrapMode: 0
-      filterMode: 1
-      aniso: 1
-    - textureName: Ground_Grass - mask
+    - textureName: TreeLeafs - specular
       wrapMode: 0
       filterMode: 1
       aniso: 1
@@ -550,15 +490,14 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 64
+      textureHeight: 64
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: 2060829573830204420, guid: 5f7fd5ed832146b40ac27e5f13227684,
+    material: {fileID: 8071754731105995985, guid: 331b80a8345a8b34d88c1afa428c67e3,
       type: 3}
     generatedTextures:
-    - {fileID: 2375421188976147911, guid: 5f7fd5ed832146b40ac27e5f13227684, type: 3}
-    - {fileID: -5147554945439316039, guid: 5f7fd5ed832146b40ac27e5f13227684, type: 3}
-    - {fileID: 2926218167849824876, guid: 5f7fd5ed832146b40ac27e5f13227684, type: 3}
-    - {fileID: 3285565494440796506, guid: 5f7fd5ed832146b40ac27e5f13227684, type: 3}
+    - {fileID: -2790408586931417046, guid: 331b80a8345a8b34d88c1afa428c67e3, type: 3}
+    - {fileID: -5141147141858779073, guid: 331b80a8345a8b34d88c1afa428c67e3, type: 3}
+    - {fileID: 5320660289603579180, guid: 331b80a8345a8b34d88c1afa428c67e3, type: 3}

@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1466325091}
+  timeBetweenCharacters: 0.05
   DialogueUIParent: {fileID: 702656013}
   speakerText: {fileID: 541897914}
   sentenceText: {fileID: 542460725}

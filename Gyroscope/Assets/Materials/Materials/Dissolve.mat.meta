@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Gyroscope/Assets/Materials/Materials/Dissolve.mat.meta
 guid: 94c12730a98c52d40a80dd80d68a4cd2
 NativeFormatImporter:
+=======
+guid: 2b427692f2b3a534eb1cc13db2097d12
+folderAsset: yes
+DefaultImporter:
+>>>>>>> develop:Gyroscope/Assets/Environment/Tree/Treeit.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

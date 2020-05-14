@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     #endregion
 
     public FirstPersonController playerController;
+    public float timeBetweenCharacters;
 
     [Header("Dialogue UI")]
     public Canvas DialogueUIParent;
@@ -39,6 +40,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<Dialogue.SentenceCombo> sentences;
     private bool dialogueInProgress;
     private bool textInProgress;
+    private bool textWritingInProgress;
+
+    private bool textWritingSkipped;
+
 
     private void Awake()
     {
@@ -52,18 +57,26 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueInProgress)
+        if (dialogueInProgress && !textWritingInProgress)
         {
             if (Input.GetButtonDown("Submit"))
             {
+                
                 DisplayNextSentenceDialogue();
             }
         }
-        else if (textInProgress)
+        else if (textInProgress && !textWritingInProgress)
         {
             if (Input.GetButtonDown("Submit"))
             {
                 EndText();
+            }
+        }
+        else if (textWritingInProgress)
+        {
+            if (Input.GetButtonDown("Submit"))
+            {
+                textWritingSkipped = true;
             }
         }
     }
@@ -72,7 +85,7 @@ public class DialogueManager : MonoBehaviour
     {
         playerController.controlEnabled = false;
         TextUIParent.gameObject.SetActive(true);
-        TextUIText.SetText(singleText.text);
+        StartCoroutine(DisplayTextSlow(TextUIText, singleText.text, timeBetweenCharacters));
 
         textInProgress = true;
     }
@@ -115,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentenceCombo.sentence;
 
         speakerText.SetText(speaker);
-        sentenceText.SetText(sentence);
+        StartCoroutine(DisplayTextSlow(sentenceText, sentence, timeBetweenCharacters));
     }
 
     private void EndDialogue()
@@ -123,5 +136,38 @@ public class DialogueManager : MonoBehaviour
         DialogueUIParent.gameObject.SetActive(false);
         dialogueInProgress = false;
         playerController.controlEnabled = true;
+    }
+
+    private IEnumerator DisplayTextSlow(TextMeshProUGUI textGUI, string finalText, float waitBetweenCharacters)
+    {
+        textWritingInProgress = true;
+
+        string intermediateText = "";
+        int currentCharacterIndex = -1;
+
+        while (true)
+        {
+            currentCharacterIndex++;
+            if (currentCharacterIndex >= finalText.Length)
+            {
+                break;
+            }
+            else
+            {
+                if (textWritingSkipped)
+                {
+                    textGUI.SetText(finalText);
+                    break;
+                }
+                intermediateText += finalText[currentCharacterIndex];
+                textGUI.SetText(intermediateText);
+                yield return new WaitForSeconds(waitBetweenCharacters);
+            }
+        }
+
+        textWritingInProgress = false;
+        textWritingSkipped = false;
+
+        yield return null;
     }
 }
