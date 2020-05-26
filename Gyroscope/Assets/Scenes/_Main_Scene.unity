@@ -1686,6 +1686,7 @@ GameObject:
   - component: {fileID: 1466325091}
   - component: {fileID: 1466325090}
   - component: {fileID: 1466325089}
+  - component: {fileID: 1466325095}
   m_Layer: 0
   m_Name: Wall-E
   m_TagString: Player
@@ -1736,7 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivityX: 2
   mouseSensitivityY: 2
-  walkSpeed: 25
+  walkSpeed: 10
   jumpForce: 220
   groundedMask:
     serializedVersion: 2
@@ -1789,6 +1790,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatorCollider: {fileID: 656921380}
   startsActivated: 1
+--- !u!114 &1466325095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466325088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff093bb29c56d0a4982561d539c85d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedp: 0
+  minFreq: 0
+  maxFreq: 0
+  MaxSpeed: 0
 --- !u!1 &2135816187
 GameObject:
   m_ObjectHideFlags: 0
