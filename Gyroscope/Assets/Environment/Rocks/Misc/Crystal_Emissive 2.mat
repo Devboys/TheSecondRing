@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crystal_Emissive
+  m_Name: Crystal_Emissive 2
   m_Shader: {fileID: -6465566751694194690, guid: 010c05cb90ac8a14caf5948b165e367c,
     type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
@@ -111,10 +111,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1DEA01FF: 30
-    - Vector1_4F9399E: 50
+    - Vector1_1DEA01FF: 0
+    - Vector1_4F9399E: 0
     - Vector1_A845ECB4: 0
-    - Vector1_C05E6C68: 50
+    - Vector1_C05E6C68: 100
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -235,8 +235,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_8627100: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 0}
-    - Color_9E49CD80: {r: 0.8756239, g: 0.9433962, b: 0.3960484, a: 0}
+    - Color_8627100: {r: 0.7075472, g: 0.130162, b: 0.130162, a: 0}
+    - Color_9E49CD80: {r: 0.8396226, g: 0.12104398, b: 0.0039604935, a: 0}
     - Vector2_8A65D9F1: {r: 30, g: 50, b: 0, a: 0}
     - _BaseColor: {r: 0, g: 0.103946924, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

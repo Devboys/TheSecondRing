@@ -9342,8 +9342,9 @@ GameObject:
   - component: {fileID: 1374010455}
   - component: {fileID: 1374010454}
   - component: {fileID: 1374010453}
+  - component: {fileID: 1374010456}
   m_Layer: 0
-  m_Name: IntensityTrigger2
+  m_Name: BlockPlayerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9398,6 +9399,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374010451}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1374010456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374010451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab9d3cbf71c7814caa7a0f938166b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderTarget: {fileID: 1150942711}
+  matToChange: {fileID: 2100000, guid: 217b6339a24b73c48b818e1deb77ff95, type: 2}
 --- !u!1001 &1379300907
 PrefabInstance:
   m_ObjectHideFlags: 0
