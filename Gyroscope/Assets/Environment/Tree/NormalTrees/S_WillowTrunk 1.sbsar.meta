@@ -471,6 +471,10 @@ ScriptedImporter:
         from: 0
         to: 3
     textureParameters:
+    - textureName: WillowTrunk - diffuse
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
     - textureName: WillowTrunk - normal
       wrapMode: 0
       filterMode: 1
@@ -480,10 +484,6 @@ ScriptedImporter:
       filterMode: 1
       aniso: 1
     - textureName: WillowTrunk - mask
-      wrapMode: 0
-      filterMode: 1
-      aniso: 1
-    - textureName: WillowTrunk - diffuse
       wrapMode: 0
       filterMode: 1
       aniso: 1
