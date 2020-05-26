@@ -19,7 +19,7 @@ public class MoveToPoseOnActivate : ActivateableBase
 
     private Vector3 GetTargetPos => Target != null ? Target.position : StartPos;
     private Vector3 GetTargetPosGizmos => Target != null ? Target.position : transform.position;
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
         ActivatorTrans = activator.transform;
     }

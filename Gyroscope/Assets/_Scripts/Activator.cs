@@ -7,11 +7,13 @@ public class Activator : MonoBehaviour
 {
     public bool isActive = false;
 
+    public float currentIntensity = 1;
+
     private void OnTriggerEnter(Collider other)
     {
         if (isActive)
         { 
-            other.GetComponent<ActivateableBase>()?.Activate(gameObject);
+            other.GetComponent<ActivateableBase>()?.Activate(gameObject, currentIntensity);
         }
     }
 

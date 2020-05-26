@@ -9,7 +9,7 @@ public class DistanceProxyActivate : ActivateableBase
 
     [SerializeField] private GameObject target;
 
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
         target = activator;
     }
