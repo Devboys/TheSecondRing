@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class KillYourselfTrash : MonoBehaviour
+public class KillYourselfTrash : OnClickInteractable
 {
     public bool pressbutton;
 
@@ -18,6 +18,8 @@ public class KillYourselfTrash : MonoBehaviour
 
     private void Start()
     {
+        OnInteractEvent += () => OnKYSbuttonPressed();
+
         foreach(var t in texts)
         {
             t.SetActive(false);

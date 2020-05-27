@@ -18,8 +18,13 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
     public float originalMinDistanceValue = 30;
     public float originalMaxDistanceValue = 50;
     public float originalEmmisionStrengthValue = 50;
+    public float originalActivatorEmissionStrength = 4.19f;
+    public Vector3 originalActivatorScale = new Vector3(25, 25, 25);
 
     Dictionary<string, matPair> storedVals;
+
+    Activator _activator;
+    Material activatorMaterial;
 
     private struct matPair
     {
@@ -37,6 +42,9 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
     {
         storedVals = new Dictionary<string, matPair>();
 
+        _activator = FindObjectOfType<Activator>();
+        activatorMaterial = _activator.GetComponent<Renderer>().sharedMaterial;
+
         //add all material floats to stored dictionary for later use.
         storedVals.Add("minDistance", new matPair("Vector1_1DEA01FF", RendererToChange.sharedMaterial.GetFloat("Vector1_1DEA01FF"))); //minDistance on crystalReact
         storedVals.Add("maxDistance", new matPair("Vector1_4F9399E", RendererToChange.sharedMaterial.GetFloat("Vector1_4F9399E"))); //maxDistance on crystalReact;
@@ -48,6 +56,9 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
 
         glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
+        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
+
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -97,6 +108,11 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
 
         glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
+
+        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
+
+        _activator.transform.localScale = originalActivatorScale;
+
     }
 
     private IEnumerator toneDownLights(float toneDownTime)
@@ -114,6 +130,8 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
 
             glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue * (1-normalizedTime));
 
+            _activator.transform.localScale = originalActivatorScale * (1 - normalizedTime);
+
             timer += Time.deltaTime;
 
             yield return null;
@@ -123,6 +141,9 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, 0.2f);
 
         glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", 0);
+        activatorMaterial.SetFloat("Vector1_3F65C942", 0);
+
+        _activator.transform.localScale = Vector3.zero;
 
     }
 
@@ -131,17 +152,25 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         yield return null;
         float timer = 0;
 
+        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
+
         while (timer < toneUpTime)
         {
 
             float normalizedTime = timer / toneUpTime;
+
             //nothing worked so we're just resetting values manually, gotta change  this if we change fields
             RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue * normalizedTime);
             RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue * normalizedTime);
 
             glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue * normalizedTime);
 
+            //activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength * normalizedTime);
+
+            _activator.transform.localScale = originalActivatorScale * normalizedTime;
+
             timer += Time.deltaTime;
+
 
             yield return null;
         }
@@ -150,5 +179,7 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
 
         glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
+
+        _activator.transform.localScale = originalActivatorScale;
     }
 }
