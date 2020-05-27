@@ -4216,7 +4216,7 @@ GameObject:
   - component: {fileID: 2083381979}
   - component: {fileID: 2083381978}
   - component: {fileID: 2083381977}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rockbot 1 (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}

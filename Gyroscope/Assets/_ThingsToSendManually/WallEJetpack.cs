@@ -17,23 +17,20 @@ public class WallEJetpack : MonoBehaviour
     float t;
     void Update()
     {
-        //t += Time.deltaTime;
-        //if (t > .2f)
-        //{
-        //    t = 0;
-            speedp = Vector3.Distance(prev, transform.position);
-            prev = transform.position;
-        //}
+        speedp = Vector3.Distance(prev, transform.position);
+        prev = transform.position;
         if (!AudioSource)
         {
             AudioSource = GetComponent<AudioSource>();
         }
-        //var speed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
-        //speedp = speed;
+
         var norm = Mathf.Clamp01(speedp / MaxSpeed);
 
 
-        AudioSource.pitch = Mathf.MoveTowards(AudioSource.pitch, Mathf.Clamp(maxFreq * norm, minFreq, maxFreq), Time.deltaTime);
+        if (AudioSource)
+        {
+            AudioSource.pitch = Mathf.MoveTowards(AudioSource.pitch, Mathf.Clamp(maxFreq * norm, minFreq, maxFreq), Time.deltaTime);
+        }
         
     }
 }

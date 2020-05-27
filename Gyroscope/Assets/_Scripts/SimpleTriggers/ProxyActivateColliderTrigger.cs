@@ -21,43 +21,20 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
     public float originalActivatorEmissionStrength = 4.19f;
     public Vector3 originalActivatorScale = new Vector3(25, 25, 25);
 
-    Dictionary<string, matPair> storedVals;
+    public string minDistanceValHash;
+    public string maxDistanceValHash;
+    public string emmisionStrengthHash;
 
     Activator _activator;
-    Material activatorMaterial;
-
-    private struct matPair
-    {
-        public matPair(string s, float v)
-        {
-            field = s;
-            value = v;
-        }
-
-        public string field;
-        public float value;
-    }
 
     private void Start()
     {
-        storedVals = new Dictionary<string, matPair>();
-
-        _activator = FindObjectOfType<Activator>();
-        activatorMaterial = _activator.GetComponent<Renderer>().sharedMaterial;
-
-        //add all material floats to stored dictionary for later use.
-        storedVals.Add("minDistance", new matPair("Vector1_1DEA01FF", RendererToChange.sharedMaterial.GetFloat("Vector1_1DEA01FF"))); //minDistance on crystalReact
-        storedVals.Add("maxDistance", new matPair("Vector1_4F9399E", RendererToChange.sharedMaterial.GetFloat("Vector1_4F9399E"))); //maxDistance on crystalReact;
-
-        storedVals.Add("emmisionStrength", new matPair("Vector1_C05E6C68", glowRenderer.sharedMaterial.GetFloat("Vector1_C05E6C68"))); //emmision brightness on 
 
         //nothing worked so were just doing this manually
-        RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue);
-        RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, originalMinDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue);
 
-        glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
-        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
-
+        glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue);
 
     }
 
@@ -72,11 +49,9 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         {
             if (collision.CompareTag(StaticVariables.Tags.Player))
             {
-                //colliderTarget.enabled = true;
-                //RendererToChange.sharedMaterial.SetFloat("Vector1_1DEA01FF", 0.1f);
-                //RendererToChange.sharedMaterial.SetFloat("Vector1_4F9399E", 0.2f);
+                _activator = FindObjectOfType<Activator>();
 
-                //glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", 0f);
+                colliderTarget.enabled = true;
 
                 StartCoroutine(toneDownLights(toneTime));
 
@@ -87,16 +62,10 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
 
     public void ActivateEverything()
     {
-
+        _activator = FindObjectOfType<Activator>();
         //disable colliders
         colliderTarget.enabled = false;
         colliderTarget2.enabled = false;
-
-        ////nothing worked so we're just resetting values manually, gotta change  this if we change fields
-        //RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue);
-        //RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
-
-        //glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
 
         StartCoroutine(toneUpLights(toneTime));
     }
@@ -104,12 +73,10 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
     private void OnDestroy()
     {
         //nothing worked so we're just doin this manually
-        RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue);
-        RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, originalMinDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue);
 
-        glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
-
-        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
+        glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue);
 
         _activator.transform.localScale = originalActivatorScale;
 
@@ -122,13 +89,13 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
 
         while (timer < toneDownTime)
         {
-            Debug.Log("toning down");
             float normalizedTime = timer / toneDownTime;
-            //nothing worked so we're just resetting values manually, gotta change  this if we change fields
-            RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue * (1-normalizedTime));
-            RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue * (1-normalizedTime));
 
-            glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue * (1-normalizedTime));
+            //nothing worked so we're just resetting values manually, gotta change  this if we change fields
+            RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, originalMinDistanceValue * (1-normalizedTime));
+            RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue * (1-normalizedTime));
+
+            glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue * (1-normalizedTime));
 
             _activator.transform.localScale = originalActivatorScale * (1 - normalizedTime);
 
@@ -137,11 +104,10 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
             yield return null;
         }
         //nothing worked so we're just resetting values manually, gotta change  this if we change fields
-        RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, 0.1f);
-        RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, 0.2f);
+        RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, 0.1f);
+        RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, 0.2f);
 
-        glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", 0);
-        activatorMaterial.SetFloat("Vector1_3F65C942", 0);
+        glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, 0);
 
         _activator.transform.localScale = Vector3.zero;
 
@@ -152,20 +118,15 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         yield return null;
         float timer = 0;
 
-        activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength);
-
         while (timer < toneUpTime)
         {
-
             float normalizedTime = timer / toneUpTime;
 
             //nothing worked so we're just resetting values manually, gotta change  this if we change fields
-            RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue * normalizedTime);
-            RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue * normalizedTime);
+            RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, originalMinDistanceValue * normalizedTime);
+            RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue * normalizedTime);
 
-            glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue * normalizedTime);
-
-            //activatorMaterial.SetFloat("Vector1_3F65C942", originalActivatorEmissionStrength * normalizedTime);
+            glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue * normalizedTime);
 
             _activator.transform.localScale = originalActivatorScale * normalizedTime;
 
@@ -175,10 +136,10 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
             yield return null;
         }
         //nothing worked so we're just resetting values manually, gotta change  this if we change fields
-        RendererToChange.sharedMaterial.SetFloat(storedVals["minDistance"].field, originalMinDistanceValue);
-        RendererToChange.sharedMaterial.SetFloat(storedVals["maxDistance"].field, originalMaxDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(minDistanceValHash, originalMinDistanceValue);
+        RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue);
 
-        glowRenderer.sharedMaterial.SetFloat("Vector1_C05E6C68", originalEmmisionStrengthValue);
+        glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue);
 
         _activator.transform.localScale = originalActivatorScale;
     }

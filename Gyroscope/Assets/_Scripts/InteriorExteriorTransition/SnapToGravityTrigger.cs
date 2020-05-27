@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TeleportToOverworldTargetTrigger : MonoBehaviour
+public class SnapToGravityTrigger : MonoBehaviour
 {
     //the target to teleport the player to
     public Transform target;
-    private FirstPersonController player;
-
-    public Image fadeImage;
+    public FirstPersonController player;
 
     public float transitionTime;
 
-    public void Start()
-    {
-        player = FindObjectOfType<FirstPersonController>();
-    }
-
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            player = other.GetComponent<FirstPersonController>();
-            BeginTransition();
+
+        if (player.GetComponent<GravityBody>().isAttracted == true) {
+            player.GetComponent<GravityBody>().isAttracted = false;
         }
+        else
+        {
+            player.GetComponent<GravityBody>().isAttracted = true;
+        }
+
     }
 
     private void BeginTransition()

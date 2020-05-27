@@ -10267,6 +10267,9 @@ MonoBehaviour:
   originalEmmisionStrengthValue: 50
   originalActivatorEmissionStrength: 4.19
   originalActivatorScale: {x: 25, y: 25, z: 25}
+  minDistanceValHash: Vector1_1DEA01FF
+  maxDistanceValHash: Vector1_4F9399E
+  emmisionStrengthHash: Vector1_C05E6C68
 --- !u!1001 &1379300907
 PrefabInstance:
   m_ObjectHideFlags: 0
