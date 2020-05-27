@@ -10262,8 +10262,8 @@ MonoBehaviour:
   glowRenderer: {fileID: 873832202}
   toneTime: 1
   triggered: 0
-  originalMinDistanceValue: 30
-  originalMaxDistanceValue: 50
+  originalMinDistanceValue: 10
+  originalMaxDistanceValue: 30
   originalEmmisionStrengthValue: 50
   originalActivatorEmissionStrength: 4.19
   originalActivatorScale: {x: 25, y: 25, z: 25}
