@@ -9,8 +9,9 @@ public class StartOptions : MonoBehaviour {
 
 
     public MenuSettings menuSettingsData;
-	public int sceneToStart = 1;										//Index number in build settings of scene to load if changeScenes is true
-	public bool changeScenes;											//If true, load a new scene when Start is pressed, if false, fade out UI and continue in single scene
+	public int sceneToStart = 1;                                        //Index number in build settings of scene to load if changeScenes is true
+    public int[] ScenesToStart;
+    public bool changeScenes;											//If true, load a new scene when Start is pressed, if false, fade out UI and continue in single scene
 	public bool changeMusicOnStart;										//Choose whether to continue playing menu music or start a new music clip
     public CanvasGroup fadeOutImageCanvasGroup;                         //Canvas group used to fade alpha of image which fades in before changing scenes
     public Image fadeImage;                                             //Reference to image used to fade out before changing scenes
@@ -99,7 +100,17 @@ public class StartOptions : MonoBehaviour {
 		showPanels.HideMenu ();
 
 		//Load the selected scene, by scene index number in build settings
-		SceneManager.LoadScene (sceneToStart);
+		foreach(int sceneIndex in ScenesToStart)
+        {
+            if(sceneIndex == sceneToStart)
+            {
+                SceneManager.LoadScene(sceneIndex);
+            }
+            else
+                SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
+        }
+        
+        
 	}
 
 	public void HideDelayed()
@@ -139,7 +150,8 @@ public class StartOptions : MonoBehaviour {
         }
         HideDelayed();
 
-        StartCoroutine(FadeOutImage(1f, 0f));
+        fadeImage.enabled = false;
+        //StartCoroutine(FadeOutImage(1f, 0f));
     }
 
     public IEnumerator FadeOutImage(float startAlpha, float endAlpha)
@@ -154,7 +166,6 @@ public class StartOptions : MonoBehaviour {
             float currentAlpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / totalDuration);
             Color nCol = fadeImage.color;
             nCol.a = currentAlpha;
-
             fadeImage.color = nCol;
             yield return null;
         }

@@ -9,27 +9,28 @@ public class WallEJetpack : MonoBehaviour
     public float maxFreq;
 
     public float MaxSpeed;
-    AudioSource AudioSource;
+    AudioSource audioSource;
 
     // Update is called once per frame
 
     Vector3 prev = Vector3.one;
     float t;
+
     void Update()
     {
         speedp = Vector3.Distance(prev, transform.position);
         prev = transform.position;
-        if (!AudioSource)
+        if (!audioSource)
         {
-            AudioSource = GetComponent<AudioSource>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         var norm = Mathf.Clamp01(speedp / MaxSpeed);
 
 
-        if (AudioSource)
+        if (audioSource)
         {
-            AudioSource.pitch = Mathf.MoveTowards(AudioSource.pitch, Mathf.Clamp(maxFreq * norm, minFreq, maxFreq), Time.deltaTime);
+            audioSource.pitch = Mathf.MoveTowards(audioSource.pitch, Mathf.Clamp(maxFreq * norm, minFreq, maxFreq), Time.deltaTime);
         }
         
     }

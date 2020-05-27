@@ -9,8 +9,6 @@ public class TeleportToOverworldTargetTrigger : MonoBehaviour
     public Transform target;
     private FirstPersonController player;
 
-    public Image fadeImage;
-
     public float transitionTime;
 
     public void Start()
@@ -30,10 +28,17 @@ public class TeleportToOverworldTargetTrigger : MonoBehaviour
     private void BeginTransition()
     {
         Debug.Log("Teleporting");
+        FindObjectOfType<FadeInImage>().FadeIn(false);
+
         player.controlEnabled = false;
+        StartCoroutine(TransitionPlayer());
+    }
+
+    private void DelayedTeleport()
+    {
         player.GetComponent<GravityBody>().isAttracted = true;
         player.TeleportPlayerToPosition(target.position);
-        StartCoroutine(TransitionPlayer());
+        FindObjectOfType<FadeInImage>().FadeOut();
     }
 
     private void EndTransition()
@@ -43,7 +48,9 @@ public class TeleportToOverworldTargetTrigger : MonoBehaviour
 
    private IEnumerator TransitionPlayer()
    {
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(transitionTime / 2);
+        DelayedTeleport();
+        yield return new WaitForSeconds(transitionTime / 2);
         EndTransition();
    }
 
