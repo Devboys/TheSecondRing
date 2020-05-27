@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002da7aa03cd43941b3540c10a9fcf21, type: 3}
+  m_Name: Religious Tablet 1
+  m_EditorClassIdentifier: 
+  text: "As we saw our own doom approach, we knew that we were the perpetrators of
+    it. As this worlds renewing life force withered and died in our hands, He wept
+    bitter tears and lost the will to continue.\n\nBut we were stubborn, our will
+    to live was strong. And so we toiled, crafted, invented, sacrificed. \n\nAnd
+    now, we can continue on, continue  finding a way to escape Him, continue surviving...
+    For a price."
