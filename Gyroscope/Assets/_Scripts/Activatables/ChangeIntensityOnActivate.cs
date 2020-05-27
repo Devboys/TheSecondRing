@@ -30,7 +30,7 @@ public class ChangeIntensityOnActivate : ActivateableBase
         _light.intensity = calcIntensity;
     }
 
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
         isActive = true;
         target = activator.transform;

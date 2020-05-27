@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Gyroscope/Assets/Materials/Materials/DissolveEmission.mat.meta
+guid: 3bc81ed368423b342bcfa1d9d6276a8a
+=======
 guid: 9b8cf545776a43648b08c9f68794b58d
+>>>>>>> develop:Gyroscope/Assets/Dialogues/Cave/Religious Tablet, Cave.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

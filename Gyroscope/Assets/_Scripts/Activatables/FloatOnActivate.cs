@@ -27,7 +27,7 @@ public class FloatOnActivate : ActivateableBase
         }
     }
 
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
         isActive = true;
         target = activator.transform;

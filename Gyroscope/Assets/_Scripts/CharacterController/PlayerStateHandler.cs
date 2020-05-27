@@ -6,15 +6,17 @@ public class PlayerStateHandler : MonoBehaviour
 {
     [SerializeField] private GameObject activatorCollider;
 
+    public bool startsActivated = false;
+
     public void Awake()
     {
-        activatorCollider.SetActive(false);
+        activatorCollider.SetActive(startsActivated);
     }
 
     public void EnableActivator()
     {
         activatorCollider.SetActive(true);
-    }
 
+    }
 
 }

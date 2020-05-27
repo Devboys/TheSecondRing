@@ -11,9 +11,9 @@ public class ChildActivator : ActivateableBase
         Children = GetComponentsInChildren<ActivateableBase>().Where(a => a != this).ToList();
     }
 
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
-        Children.ForEach(a => a.Activate(activator));
+        Children.ForEach(a => a.Activate(activator, intensity));
     }
 
     public override void Disable()

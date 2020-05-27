@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticVariables : MonoBehaviour
+public class StaticVariables
 {
     public class Tags
     {

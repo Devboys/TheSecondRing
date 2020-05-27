@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ActivateableBase : MonoBehaviour
 {
-    public abstract void Activate(GameObject activator);
+    public abstract void Activate(GameObject activator, float intensity);
     public abstract void Disable();
     
     private void OnTriggerEnter(Collider other)

@@ -18,7 +18,7 @@ public class RotateOnActive : ActivateableBase
         transform.Rotate(axis, calcSpeed * Time.deltaTime);
     }
 
-    public override void Activate(GameObject activator)
+    public override void Activate(GameObject activator, float intensity)
     {
         isActive = true;
         target = activator.transform;
