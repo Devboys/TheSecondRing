@@ -114,7 +114,7 @@ Material:
     - Vector1_1DEA01FF: 30
     - Vector1_4F9399E: 50
     - Vector1_A845ECB4: 0
-    - Vector1_C05E6C68: 0
+    - Vector1_C05E6C68: 50
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
