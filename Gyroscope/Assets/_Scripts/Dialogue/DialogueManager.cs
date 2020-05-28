@@ -46,6 +46,9 @@ public class DialogueManager : MonoBehaviour
 
     private bool locked;
 
+    AudioSource aSource;
+    public AudioClip soundToPlay;
+
     private void Awake()
     {
         InitSingleton();
@@ -55,6 +58,9 @@ public class DialogueManager : MonoBehaviour
     {
         locked = false;
         sentences = new Queue<Dialogue.SentenceCombo>();
+        aSource = GetComponent<AudioSource>();
+        if (aSource)
+            aSource.clip = soundToPlay;
     }
 
     private void Update()
@@ -140,6 +146,8 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        aSource.Play();
 
         Dialogue.SentenceCombo sentenceCombo = sentences.Dequeue();
         string speaker = sentenceCombo.speakerName;
