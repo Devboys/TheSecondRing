@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d808b53e6d699f4499f2f26d113b1d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 1
+  fadeTime: 2
   curve:
     serializedVersion: 2
     m_Curve:
