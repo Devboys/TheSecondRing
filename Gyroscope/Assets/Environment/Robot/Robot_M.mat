@@ -21,13 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Robot_M
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 6047030b2421f0b4c92c4158f493c873,
+    type: 3}
   m_ShaderKeywords: _EMISSIVE_COLOR_MAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    MotionVector: User
   disabledShaderPasses:
   - DistortionVectors
   - MOTIONVECTORS
@@ -37,6 +39,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_1D995F23:
+        m_Texture: {fileID: 2800000, guid: 18448932276611f4196ba8989c15aee7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_25EB1832:
+        m_Texture: {fileID: 2800000, guid: c54166974ed3a6a43949dfcb98f4d52b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CDABAF37:
+        m_Texture: {fileID: 2800000, guid: 1bbd096eda21b914f94c60e0df6c041b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -122,6 +136,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_2B84E7EB: -0.03
+    - Vector1_963DE2C3: 1
+    - Vector1_BBCEDB1C: 0
+    - Vector1_F88C70DA: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -248,8 +266,8 @@ Material:
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 0, g: 5.9339046, b: 7.5, a: 7.5}
-    - _EmissiveColorLDR: {r: 0, g: 0.7911873, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 5.941179, b: 7.5, a: 7.5}
+    - _EmissiveColorLDR: {r: 0, g: 0.7921572, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

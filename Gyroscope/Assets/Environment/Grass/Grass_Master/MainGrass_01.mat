@@ -110,7 +110,7 @@ Material:
     - Color_209FB624: {r: 0.8862745, g: 0.34413707, b: 0, a: 0}
     - Color_9CCCD40F: {r: 0.17425215, g: 1, b: 0, a: 0}
     - Color_AA9276EB: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0}
-    - Color_BF49E519: {r: 0.3696203, g: 0.40392157, b: 0, a: 1}
+    - Color_BF49E519: {r: 0.2354717, g: 0.4528302, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

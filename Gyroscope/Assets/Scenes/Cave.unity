@@ -346,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
   dialogue: {fileID: 0}
+  soundToPlay: {fileID: 0}
 --- !u!114 &766716579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
   dialogue: {fileID: 11400000, guid: 72c70e5fac82a764ab90cac23212d808, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &766716580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -499,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
   dialogue: {fileID: 0}
+  soundToPlay: {fileID: 0}
 --- !u!114 &951412785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,6 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
   dialogue: {fileID: 11400000, guid: 72c70e5fac82a764ab90cac23212d808, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &951412786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -622,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
   dialogue: {fileID: 0}
+  soundToPlay: {fileID: 0}
 --- !u!114 &1014367316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
   dialogue: {fileID: 11400000, guid: 72c70e5fac82a764ab90cac23212d808, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &1014367317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1059,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
   dialogue: {fileID: 0}
+  soundToPlay: {fileID: 0}
 --- !u!114 &1596142796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,6 +1080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
   dialogue: {fileID: 11400000, guid: 72c70e5fac82a764ab90cac23212d808, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &1596142797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1182,6 +1190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
   dialogue: {fileID: 0}
+  soundToPlay: {fileID: 0}
 --- !u!114 &1633184485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
   dialogue: {fileID: 11400000, guid: 72c70e5fac82a764ab90cac23212d808, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &1633184486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1429,6 +1439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.990566, g: 0.23829652, b: 0.23829652, a: 0}
   singleText: {fileID: 11400000, guid: cd34233c65c4c4a4bac444d6da79ffb4, type: 2}
+  soundToPlay: {fileID: 0}
 --- !u!65 &2083381978
 BoxCollider:
   m_ObjectHideFlags: 0

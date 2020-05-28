@@ -17,7 +17,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Ground_Grass\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"2732986774\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"hue\" uid=\"3389566655\" type=\"0\" value=\"0.848\"
+      <presetinput identifier=\"hue\" uid=\"3389566655\" type=\"0\" value=\"0.51\"
       />\n  <presetinput identifier=\"saturation\" uid=\"3389564627\" type=\"0\"
       value=\"0.262\" />\n  <presetinput identifier=\"luminosity\" uid=\"3389564636\"
       type=\"0\" value=\"0.51\" />\n  <presetinput identifier=\"scale\" uid=\"3389564610\"
