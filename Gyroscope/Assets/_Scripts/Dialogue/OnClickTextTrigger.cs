@@ -7,9 +7,26 @@ public class OnClickTextTrigger : OnClickInteractable
 
     public SingleText singleText;
 
+    public AudioClip soundToPlay;
+    AudioSource aSource;
+
+    private void Start()
+    {
+        aSource = GetComponent<AudioSource>();
+        if (aSource)
+        {
+            aSource.clip = soundToPlay;
+        }
+    }
+
     public override void HandleInteract(GameObject sender)
     {
-        DialogueManager.GetInstance().DisplayText(singleText);
+        bool wasLocked = DialogueManager.GetInstance().DisplayText(singleText);
+        Debug.Log(wasLocked);
+        if (aSource != null && !wasLocked)
+        {
+            aSource.Play();
+        }
     }
 
 }

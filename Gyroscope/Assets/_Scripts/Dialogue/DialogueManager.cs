@@ -83,8 +83,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void DisplayText(SingleText singleText)
+    public bool DisplayText(SingleText singleText)
     {
+        bool wasLocked = locked;
+
         if (!locked)
         {
             locked = true;
@@ -94,6 +96,8 @@ public class DialogueManager : MonoBehaviour
 
             textInProgress = true;
         }
+
+        return wasLocked;
     }
 
     public void EndText()
