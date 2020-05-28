@@ -2113,7 +2113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -9.8
   bodyType: 0
-  isAttracted: 0
+  isAttracted: 1
 --- !u!114 &1466325091
 MonoBehaviour:
   m_ObjectHideFlags: 0
