@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool textWritingSkipped;
 
+    private bool locked;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        locked = false;
         sentences = new Queue<Dialogue.SentenceCombo>();
     }
 
@@ -83,15 +85,20 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayText(SingleText singleText)
     {
-        playerController.controlEnabled = false;
-        TextUIParent.gameObject.SetActive(true);
-        StartCoroutine(DisplayTextSlow(TextUIText, singleText.text, timeBetweenCharacters));
+        if (!locked)
+        {
+            locked = true;
+            playerController.controlEnabled = false;
+            TextUIParent.gameObject.SetActive(true);
+            StartCoroutine(DisplayTextSlow(TextUIText, singleText.text, timeBetweenCharacters));
 
-        textInProgress = true;
+            textInProgress = true;
+        }
     }
 
     public void EndText()
     {
+        locked = false;
         playerController.controlEnabled = true;
         TextUIParent.gameObject.SetActive(false);
 
@@ -100,19 +107,23 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        playerController.controlEnabled = false;
-
-        DialogueUIParent.gameObject.SetActive(true);
-        sentences.Clear();
-
-        dialogueInProgress = true;
-
-        foreach (Dialogue.SentenceCombo sentenceCombo in dialogue.sentences)
+        if (!locked)
         {
-            this.sentences.Enqueue(sentenceCombo);
-        }
+            locked = true;
+            playerController.controlEnabled = false;
 
-        DisplayNextSentenceDialogue();
+            DialogueUIParent.gameObject.SetActive(true);
+            sentences.Clear();
+
+            dialogueInProgress = true;
+
+            foreach (Dialogue.SentenceCombo sentenceCombo in dialogue.sentences)
+            {
+                this.sentences.Enqueue(sentenceCombo);
+            }
+
+            DisplayNextSentenceDialogue();
+        }
     }
 
     public void DisplayNextSentenceDialogue()
@@ -133,6 +144,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        locked = false;
         DialogueUIParent.gameObject.SetActive(false);
         dialogueInProgress = false;
         playerController.controlEnabled = true;
