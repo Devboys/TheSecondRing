@@ -105,8 +105,9 @@ public class DialogueManager : MonoBehaviour
         textInProgress = false;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public bool StartDialogue(Dialogue dialogue)
     {
+        bool wasLocked = locked;
         if (!locked)
         {
             locked = true;
@@ -124,6 +125,8 @@ public class DialogueManager : MonoBehaviour
 
             DisplayNextSentenceDialogue();
         }
+
+        return wasLocked;
     }
 
     public void DisplayNextSentenceDialogue()
