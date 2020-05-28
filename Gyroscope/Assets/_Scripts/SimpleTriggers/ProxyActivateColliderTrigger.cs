@@ -77,9 +77,6 @@ public class ProxyActivateColliderTrigger : MonoBehaviour
         RendererToChange.sharedMaterial.SetFloat(maxDistanceValHash, originalMaxDistanceValue);
 
         glowRenderer.sharedMaterial.SetFloat(emmisionStrengthHash, originalEmmisionStrengthValue);
-
-        _activator.transform.localScale = originalActivatorScale;
-
     }
 
     private IEnumerator toneDownLights(float toneDownTime)

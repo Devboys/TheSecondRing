@@ -44,6 +44,10 @@ public class DialogueManager : MonoBehaviour
 
     private bool textWritingSkipped;
 
+    private bool locked;
+
+    AudioSource aSource;
+    public AudioClip soundToPlay;
 
     private void Awake()
     {
@@ -52,7 +56,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        locked = false;
         sentences = new Queue<Dialogue.SentenceCombo>();
+        aSource = GetComponent<AudioSource>();
+        if (aSource)
+            aSource.clip = soundToPlay;
     }
 
     private void Update()
@@ -81,38 +89,54 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void DisplayText(SingleText singleText)
+    public bool DisplayText(SingleText singleText)
     {
-        playerController.controlEnabled = false;
-        TextUIParent.gameObject.SetActive(true);
-        StartCoroutine(DisplayTextSlow(TextUIText, singleText.text, timeBetweenCharacters));
+        bool wasLocked = locked;
 
-        textInProgress = true;
+        if (!locked)
+        {
+            locked = true;
+            playerController.controlEnabled = false;
+            TextUIParent.gameObject.SetActive(true);
+            StartCoroutine(DisplayTextSlow(TextUIText, singleText.text, timeBetweenCharacters));
+
+            textInProgress = true;
+        }
+
+        return wasLocked;
     }
 
     public void EndText()
     {
+        locked = false;
         playerController.controlEnabled = true;
         TextUIParent.gameObject.SetActive(false);
 
         textInProgress = false;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public bool StartDialogue(Dialogue dialogue)
     {
-        playerController.controlEnabled = false;
-
-        DialogueUIParent.gameObject.SetActive(true);
-        sentences.Clear();
-
-        dialogueInProgress = true;
-
-        foreach (Dialogue.SentenceCombo sentenceCombo in dialogue.sentences)
+        bool wasLocked = locked;
+        if (!locked)
         {
-            this.sentences.Enqueue(sentenceCombo);
+            locked = true;
+            playerController.controlEnabled = false;
+
+            DialogueUIParent.gameObject.SetActive(true);
+            sentences.Clear();
+
+            dialogueInProgress = true;
+
+            foreach (Dialogue.SentenceCombo sentenceCombo in dialogue.sentences)
+            {
+                this.sentences.Enqueue(sentenceCombo);
+            }
+
+            DisplayNextSentenceDialogue();
         }
 
-        DisplayNextSentenceDialogue();
+        return wasLocked;
     }
 
     public void DisplayNextSentenceDialogue()
@@ -122,6 +146,8 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        aSource.Play();
 
         Dialogue.SentenceCombo sentenceCombo = sentences.Dequeue();
         string speaker = sentenceCombo.speakerName;
@@ -133,6 +159,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        locked = false;
         DialogueUIParent.gameObject.SetActive(false);
         dialogueInProgress = false;
         playerController.controlEnabled = true;
