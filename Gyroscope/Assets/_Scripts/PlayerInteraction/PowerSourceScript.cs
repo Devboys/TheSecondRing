@@ -12,6 +12,7 @@ public class PowerSourceScript : OnClickInteractable
     public void Start()
     {
         externalASource.clip = ambienceSound;
+        externalASource.loop = true;
         externalASource.Play();
     }
 
@@ -21,6 +22,7 @@ public class PowerSourceScript : OnClickInteractable
 
         if (externalASource)
         {
+            externalASource.loop = false;
             externalASource.clip = pickupSound;
             externalASource.Play();
         }
