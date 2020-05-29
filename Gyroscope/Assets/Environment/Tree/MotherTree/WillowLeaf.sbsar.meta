@@ -17,9 +17,9 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://TreeLeafs\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"1814589844\" type=\"8\" value=\"6,6\" />\n 
-      <presetinput identifier=\"hue\" uid=\"78786851\" type=\"0\" value=\"0.593\"
-      />\n  <presetinput identifier=\"saturation\" uid=\"78786858\" type=\"0\" value=\"0.342\"
-      />\n  <presetinput identifier=\"luminosity\" uid=\"78787036\" type=\"0\" value=\"0.469\"
+      <presetinput identifier=\"hue\" uid=\"78786851\" type=\"0\" value=\"1\" />\n 
+      <presetinput identifier=\"saturation\" uid=\"78786858\" type=\"0\" value=\"0.47\"
+      />\n  <presetinput identifier=\"luminosity\" uid=\"78787036\" type=\"0\" value=\"0.42\"
       />\n  <presetinput identifier=\"Skew\" uid=\"78787755\" type=\"0\" value=\"-0.58\"
       />\n  <presetinput identifier=\"slopeIntensity\" uid=\"78767139\" type=\"0\"
       value=\"0.4\" />\n  <presetinput identifier=\"scale\" uid=\"78767601\" type=\"0\"

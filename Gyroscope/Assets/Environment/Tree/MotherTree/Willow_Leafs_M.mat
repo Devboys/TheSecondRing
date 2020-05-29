@@ -134,7 +134,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - EmissiveStrenght: 2895.94
+    - EmissiveStrenght: 192.89
     - Vector1_1D464127: 1.5
     - Vector1_9E181548: 0.31
     - Vector1_9F629B4D: -0.07

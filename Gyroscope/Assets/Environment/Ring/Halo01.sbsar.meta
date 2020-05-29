@@ -574,10 +574,10 @@ ScriptedImporter:
       />\n  <presetinput identifier=\"scale\" uid=\"153651383\" type=\"4\" value=\"8\"
       />\n  <presetinput identifier=\"disorder\" uid=\"153651368\" type=\"0\" value=\"1\"
       />\n  <presetinput identifier=\"Height_Contrast\" uid=\"153644031\" type=\"0\"
-      value=\"0.549\" />\n  <presetinput identifier=\"Height_Pos\" uid=\"153643016\"
-      type=\"0\" value=\"0.477\" />\n  <presetinput identifier=\"greenColor\" uid=\"153643090\"
-      type=\"3\" value=\"1,0,0.419516,1\" />\n  <presetinput identifier=\"sandColor\"
-      uid=\"153643083\" type=\"3\" value=\"1,0.760052,0,1\" />\n </sbspreset>\n"
+      value=\"0.59\" />\n  <presetinput identifier=\"Height_Pos\" uid=\"153643016\"
+      type=\"0\" value=\"0.61\" />\n  <presetinput identifier=\"greenColor\" uid=\"153643090\"
+      type=\"3\" value=\"0.567373,0.722232,0.962264,1\" />\n  <presetinput identifier=\"sandColor\"
+      uid=\"153643083\" type=\"3\" value=\"0,0.213161,1,1\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
