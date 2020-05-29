@@ -2348,9 +2348,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9239dbfff6989d8458162c6bc76bcb30, type: 3}
---- !u!1 &1026124769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9143142036634868930, guid: 16733315066087c4ea4ec058df28ce59,
+--- !u!23 &1026124772 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8746019422534871415, guid: 16733315066087c4ea4ec058df28ce59,
     type: 3}
   m_PrefabInstance: {fileID: 1520103544767855749}
   m_PrefabAsset: {fileID: 0}
@@ -2574,6 +2574,26 @@ Transform:
   m_Father: {fileID: 4574351588915430758}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220640588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9239dbfff6989d8458162c6bc76bcb30,
+    type: 3}
+  m_PrefabInstance: {fileID: 937407067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1220640589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220640588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aa14f34e1850640b0632904ca85106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightedColor: {r: 0.9716981, g: 0.24292453, b: 0.24292453, a: 0}
+  target: {fileID: 3930768260533325602}
 --- !u!1 &1253735142
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,6 +4389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerSourceReceptacle
       objectReference: {fileID: 0}
+    - target: {fileID: 2112458947113971973, guid: 16733315066087c4ea4ec058df28ce59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6877354651754349174, guid: 16733315066087c4ea4ec058df28ce59,
         type: 3}
       propertyPath: target
@@ -4384,6 +4409,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 217b6339a24b73c48b818e1deb77ff95, type: 2}
+    - target: {fileID: 8746019422534871415, guid: 16733315066087c4ea4ec058df28ce59,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143142036634868930, guid: 16733315066087c4ea4ec058df28ce59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9214201619068625050, guid: 16733315066087c4ea4ec058df28ce59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7334,7 +7369,7 @@ MonoBehaviour:
   stinger: {fileID: 0}
   putpowerSource: 0
   glowAroundSpeed: 40
-  powerSource: {fileID: 1026124769}
+  powerSourceRenderer: {fileID: 1026124772}
 --- !u!1 &3930768260562553860
 GameObject:
   m_ObjectHideFlags: 0

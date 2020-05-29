@@ -17,7 +17,7 @@ public class PlacePowerSource : OnClickInteractable
     List<ActivatePowerwhoo> activatePowerwhoos;
     public float glowAroundSpeed;
 
-    public GameObject powerSource;
+    public MeshRenderer powerSourceRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +57,8 @@ public class PlacePowerSource : OnClickInteractable
             return;
         }
 
+
+        powerSourceRenderer.enabled = true;
         putinSource.PlayOneShot(PlaceSound);
         ChargeSource.PlayOneShot(ChargeUp);
         isactive = true;

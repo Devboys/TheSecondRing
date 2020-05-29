@@ -775,6 +775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Non-interactable robot (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3766764903474553491, guid: 081b901314026f14b91e551554e3e0fd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7288642068752848926, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_Enabled
@@ -798,22 +803,22 @@ PrefabInstance:
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.30732736
+      value: 0.15662128
       objectReference: {fileID: 0}
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8212017
+      value: 0.86272365
       objectReference: {fileID: 0}
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4446455
+      value: -0.47006455
       objectReference: {fileID: 0}
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18294303
+      value: 0.10107934
       objectReference: {fileID: 0}
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
@@ -833,7 +838,7 @@ PrefabInstance:
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -140.549
+      value: -161.006
       objectReference: {fileID: 0}
     - target: {fileID: 9005361245823037566, guid: 081b901314026f14b91e551554e3e0fd,
         type: 3}
@@ -1892,7 +1897,7 @@ PrefabInstance:
         type: 3}
       propertyPath: singleText
       value: 
-      objectReference: {fileID: 11400000, guid: 185d00feb277b6845a650a34a8d4589b,
+      objectReference: {fileID: 11400000, guid: bda3781e5fadd6c4cb8454ff77479564,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a493869ec624554c8055b1b5ad035ac, type: 3}

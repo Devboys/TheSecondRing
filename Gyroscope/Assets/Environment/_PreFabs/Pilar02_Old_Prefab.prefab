@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1284347074454124168}
   - component: {fileID: 7821042138185551038}
   - component: {fileID: 4590686481804341319}
+  - component: {fileID: 1359099055325042826}
   m_Layer: 0
   m_Name: Pilar02_Old_Prefab
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1359099055325042826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849005072987227291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1377842, y: 3.7250159, z: 1.3115386}
+  m_Center: {x: 0.009952486, y: 0.0725584, z: 0.10590112}
