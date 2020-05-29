@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb0fea9faff717b46b7b2b06b1687739, type: 3}
-  m_Name: Opening Panel
+  m_Script: {fileID: 11500000, guid: 002da7aa03cd43941b3540c10a9fcf21, type: 3}
+  m_Name: Forever in motion tablet
   m_EditorClassIdentifier: 
-  sentences:
-  - speakerName: 
-    sentence: The panel is dark and does not respond to your presence.
+  text: Forever in motion

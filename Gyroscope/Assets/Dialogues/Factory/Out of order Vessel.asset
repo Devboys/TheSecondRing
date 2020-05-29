@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: Out of order Vessel
   m_EditorClassIdentifier: 
   sentences:
-  - speakerName: '#23354'
+  - speakerName: Golem
+    sentence: 'Reactivated. Running on auxillary environmental power. Main functions:
+      Not avalible. Transferring last recorded log.'
+  - speakerName: Maintainance #34851
     sentence: Alright, so whats with this one?
-  - speakerName: '#34851'
+  - speakerName: Maintainance #23354
     sentence: We tried out the navigation and the carry capacity, which was all good...
       Untill it tried to abosrob the source. Now its been like this for the last
-      hour
-  - speakerName: '#23354'
-    sentence: What, it just floats there?
-  - speakerName: '#34851'
+      hour.
+  - speakerName: Maintainance #34851
+    sentence: It just floats there?
+  - speakerName: Maintainance #23354
     sentence: It would seem so. The hover function is still active as long as it
-      has power, and it seems to still be remembering activities around it, but thats
+      has power, and it seems to still be remembering activities around it, but that's
       all. It's busted.
-  - speakerName: '#23354'
-    sentence: Damn. That's gonna be my ass on the line with the foreman. Deliver
-      this one to engieneering and see what they can do. I have a call to make.
+  - speakerName: Maintainance #34851
+    sentence: Darkness take it! Deliver this one to Hextech and see what they can
+      do. I have to report this.
