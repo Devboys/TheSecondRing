@@ -17,18 +17,14 @@ MonoBehaviour:
     sentence: Sir, the receptor is in place. The amount of energy that drains into
       it is... Distrubing. The hextech golems can barely contain it from the receptor
       to the engine.
-  - speakerName: Hextech Lead #2
+  - speakerName: Hextech Lead
     sentence: Good, very good. The Mother will be pleased. Tell everyone to get their
       things ready to leave right after the ceremony.
   - speakerName: Hextech Engineer #513
     sentence: Leave? But sir, we just finished the Engine, the receptor crystals,
       everything... Why leave?
-  - speakerName: Hextech Lead #2
+  - speakerName: Hextech Lead
     sentence: Don't question me. If you want to see your family again, you better
       be ready to leave before that golem activates the engine, understand?
   - speakerName: Hextech Engineer #513
     sentence: Yes sir.
-  - speakerName: Golem
-    sentence: Power low. It is getting dark...
-  - speakerName: Hextech Lead #2
-    sentence: Darkness take this thing! Get a move on!

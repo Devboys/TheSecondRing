@@ -17,7 +17,7 @@ public class GravityAttractor : MonoBehaviour {
 		switch (bodytype)
 		{
 			case GravityBody.BodyType.Player:
-				body.rotation = Quaternion.FromToRotation(localUp, gravityUp) * body.rotation;
+				body.GetComponent<Rigidbody>().MoveRotation(Quaternion.FromToRotation(localUp, gravityUp) * body.rotation);
 
 				break;
 			case GravityBody.BodyType.AllignedObject:

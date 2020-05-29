@@ -16,6 +16,9 @@ public class PlacePowerSource : OnClickInteractable
     bool isactive;
     List<ActivatePowerwhoo> activatePowerwhoos;
     public float glowAroundSpeed;
+
+    public GameObject powerSource;
+
     // Start is called before the first frame update
     void Start()
     {
