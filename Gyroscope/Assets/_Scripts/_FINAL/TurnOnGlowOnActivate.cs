@@ -28,7 +28,6 @@ public class TurnOnGlowOnActivate : ActivateableBase
             currentEmmisive = Mathf.MoveTowards(currentEmmisive, minEmmisive, (Time.deltaTime * maxEmmisive) / numSeconds);
         }
 
-        Debug.Log(currentEmmisive);
         rendToChange.material.SetFloat(emmissionStrengthHash, currentEmmisive);
         otherRenderer.material.SetFloat(otheremmisive, currentEmmisive);
 
