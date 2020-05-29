@@ -34425,7 +34425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.58603996, g: 0.03208439, b: 0.9716981, a: 0}
-  dialogue: {fileID: 11400000, guid: b7a66fe97f2947946976599db6b800e1, type: 2}
+  dialogue: {fileID: 0}
   soundToPlay: {fileID: 0}
 --- !u!114 &5055602506947814926
 MonoBehaviour:
@@ -34440,7 +34440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.6441149, g: 0.032395888, b: 0.9811321, a: 0}
-  dialogue: {fileID: 11400000, guid: 1cc14471a8d34e149813d547e4b2e9ba, type: 2}
+  dialogue: {fileID: 0}
   soundToPlay: {fileID: 0}
 --- !u!23 &5055602507143934900
 MeshRenderer:

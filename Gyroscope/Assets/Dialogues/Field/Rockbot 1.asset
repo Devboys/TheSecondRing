@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - speakerName: 
-    sentence: '"Logging construction data, day 289.
+    sentence: '"Logging construction data, rotation 289.
 
       The maintrance facility
       is finally nearing completion, and with no time to spare.
@@ -24,17 +24,19 @@ MonoBehaviour:
 
 
       We
-      have sent the little ones and the ones who does not work to the next ring.
+      have sent the little ones and the acolytes to the outer ring. There is no reason
+      for them to be here, especially in the quite likely event of an accident.
 
-      There
-      is no reason for them to be here, especially in the quite likely event of an
-      accident.
-
-      Not that it would do them much good in the long run though.
+      Not
+      that it would do them much good if things did go wrong...
 
 
-      We
-      should be able to get this thing to work in a few tries.
+      Only the
+      priests, hextech division, and construction remains here.
+
+
+      We should
+      be able to get the Engine to work in a few tries.
 
 
       We have to."'
