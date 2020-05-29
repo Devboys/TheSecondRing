@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Rockbot 2
   m_EditorClassIdentifier: 
   sentences:
-  - speakerName: Voice 1
-    sentence: Construction log 51. The cave has been sealed off on both sides with
-      the receptor crystals to prevent unauthorized passage.
-  - speakerName: Voice 1
+  - speakerName: Foreman
+    sentence: Construction log, rotation 181. The cave has been sealed off on both
+      sides with the receptor crystals to prevent unauthorized passage.
+  - speakerName: Foreman
     sentence: The power flows... Strangely, inside the cave. We thought that the
       artificial powersource was enough, but it seems to ebb out.
-  - speakerName: Voice 1
+  - speakerName: Foreman
     sentence: We have already lost a crew who got trapped inside the cave and fell
-      down the gullet. We cannot afford to lose any more.
-  - speakerName: Voice 1
+      down the gullet. We cannot afford to lose any more if construction is going
+      to be completed.
+  - speakerName: Forman
     sentence: Maybe there is some way to harness the natural power that flows through
       the cave though...

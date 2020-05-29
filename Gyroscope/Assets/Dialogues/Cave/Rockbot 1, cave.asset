@@ -18,10 +18,9 @@ MonoBehaviour:
   - speakerName: Acolyte
     sentence: What is in here, Mother?
   - speakerName: Priestess
-    sentence: The beginning, the now, eternity... Our salvation.
+    sentence: The beginning, the now, eternity... Our salvation. Even withered, the
+      roots of the Mother Tree still glow with power.
   - speakerName: Acolyte
     sentence: What must we do then, Mother?
   - speakerName: Priestess
-    sentence: '*sound of a drawn knife*
-
-      Lay upon the rock over there, child.'
+    sentence: Another transgression, my child... Another sin.
