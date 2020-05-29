@@ -29,7 +29,8 @@ public class TurnOnGlowOnActivate : ActivateableBase
         }
 
         rendToChange.material.SetFloat(emmissionStrengthHash, currentEmmisive);
-        otherRenderer.material.SetFloat(otheremmisive, currentEmmisive);
+        if(otherRenderer)
+            otherRenderer.material.SetFloat(otheremmisive, currentEmmisive);
 
     }
 
