@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0fea9faff717b46b7b2b06b1687739, type: 3}
+  m_Name: Hextech Report
+  m_EditorClassIdentifier: 
+  sentences:
+  - speakerName: Hextech Engineer #513
+    sentence: Sir, the receptor is in place. The amount of energy that drains into
+      it is... Distrubing. The hextech golems can barely contain it from the receptor
+      to the engine.
+  - speakerName: Hextech Lead #2
+    sentence: Good, very good. The Mother will be pleased. Tell everyone to get their
+      things ready to leave right after the ceremony.
+  - speakerName: Hextech Engineer #513
+    sentence: Leave? But sir, we just finished the Engine, the receptor crystals,
+      everything... Why leave?
+  - speakerName: Hextech Lead #2
+    sentence: Don't question me. If you want to see your family again, you better
+      be ready to leave before that golem activates the engine, understand?
+  - speakerName: Hextech Engineer #513
+    sentence: Yes sir.
+  - speakerName: Golem
+    sentence: Power low. It is getting dark...
+  - speakerName: Hextech Lead #2
+    sentence: Darkness take this thing! Get a move on!
